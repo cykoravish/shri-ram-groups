@@ -62,7 +62,7 @@ export default function MenuOverlay({ open, onClose }: MenuOverlayProps) {
   return (
     <div
       id="site-menu-overlay"
-      className={`fixed inset-0 z-50 flex transition-transform ease-[cubic-bezier(0.65,0,0.35,1)] ${
+     className={`fixed inset-0 z-50 flex overflow-x-hidden transition-transform ease-[cubic-bezier(0.65,0,0.35,1)] ${
         open ? "duration-700 translate-x-0" : "duration-400 -translate-x-full"
       }`}
       role="dialog"
@@ -147,7 +147,7 @@ export default function MenuOverlay({ open, onClose }: MenuOverlayProps) {
           </ul>
         </div>
 
-        <div className="flex gap-6 mt-12">
+        <div className="flex flex-wrap gap-x-5 gap-y-3 mt-12">
           {socials.map((s) => (
             <a
               key={s.label}
