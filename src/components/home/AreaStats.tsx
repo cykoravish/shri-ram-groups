@@ -39,14 +39,20 @@ function BigBlockStat({
 }) {
   const count = useCountUp(value, start);
 
+  // Diagonal "skyline cut" clip paths - mirrored for the reversed block
+  const goldClip = reverse
+    ? "polygon(100% 0, 42% 0, 58% 100%, 100% 100%)"
+    : "polygon(0 0, 58% 0, 42% 100%, 0 100%)";
+
   return (
-    <div className="relative h-56 md:h-64 overflow-hidden">
+    <div className="group relative h-56 md:h-64 overflow-hidden transition-transform duration-300 ease-out hover:scale-[1.015]">
+      {/* Base layer */}
+      <div className="absolute inset-0 bg-[#EFEEEC]" />
+      {/* Diagonal gold cut */}
       <div
-        className={`absolute inset-0 flex ${reverse ? "flex-row-reverse" : ""}`}
-      >
-        <div className="w-1/2 h-full bg-[#C4A065]" />
-        <div className="w-1/2 h-full bg-[#EFEEEC]" />
-      </div>
+        className="absolute inset-0 bg-[#C4A065] transition-[filter] duration-300 group-hover:brightness-[1.06]"
+        style={{ clipPath: goldClip }}
+      />
 
       <div className="relative z-10 h-full flex items-center justify-center">
         <span className="font-lato font-bold text-6xl md:text-7xl lg:text-8xl text-[#1F1F1F] leading-none">
@@ -118,7 +124,17 @@ export default function AreaStats() {
   return (
     <section id="abouts" ref={sectionRef} className="w-full bg-white py-14 md:py-20">
       <div className="max-w-6xl mx-auto px-6">
-        {/* Primary metrics - two-tone blocks */}
+        {/* Eyebrow / context line */}
+        <div className="text-center mb-10 md:mb-12">
+          <span className="inline-block font-lato text-xs tracking-[0.3em] uppercase text-[#C4A065] border-b border-[#C4A065] pb-2 mb-3">
+            Our Scale
+          </span>
+          <p className="font-lato text-[#707070] text-sm md:text-base mt-3 max-w-md mx-auto">
+            Two and a half decades of shaping Ghaziabad&apos;s skyline.
+          </p>
+        </div>
+
+        {/* Primary metrics - two-tone diagonal blocks */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-1 md:gap-2 mb-12 md:mb-16">
           <BigBlockStat
             value={20}
