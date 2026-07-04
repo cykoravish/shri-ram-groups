@@ -35,12 +35,19 @@ const socials = [
 
 export default function MenuOverlay({ open, onClose }: MenuOverlayProps) {
   const [mounted, setMounted] = useState(false);
+  const [entered, setEntered] = useState(false);
 
-  // Keeps overlay in the DOM briefly during exit animation
   useEffect(() => {
-    // eslint-disable-next-line react-hooks/set-state-in-effect
-    if (open) setMounted(true);
-    else {
+    if (open) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
+      setMounted(true);
+      // Double rAF guarantees the browser paints the closed position
+      // first, so the transition to open actually animates.
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => setEntered(true));
+      });
+    } else {
+      setEntered(false);
       const t = setTimeout(() => setMounted(false), 400);
       return () => clearTimeout(t);
     }
@@ -55,9 +62,9 @@ export default function MenuOverlay({ open, onClose }: MenuOverlayProps) {
   return (
     <div
       id="site-menu-overlay"
-     className={`fixed inset-0 z-50 flex transition-transform ease-[cubic-bezier(0.65,0,0.35,1)] ${
-  open ? "duration-700 translate-x-0" : "duration-400 -translate-x-full"
-}`}
+      className={`fixed inset-0 z-50 flex transition-transform ease-[cubic-bezier(0.65,0,0.35,1)] ${
+        open ? "duration-700 translate-x-0" : "duration-400 -translate-x-full"
+      }`}
       role="dialog"
       aria-modal="true"
     >
@@ -74,27 +81,26 @@ export default function MenuOverlay({ open, onClose }: MenuOverlayProps) {
 
       {/* Right panel - nav content */}
       <div className="flex-1 h-full bg-[#F7F7F7] px-8 md:px-16 py-10 flex flex-col justify-center relative overflow-y-auto">
-       <button
-  aria-label="Close menu"
-  onClick={onClose}
-  className="absolute top-0 right-6 md:right-12 h-20 z-50 w-8 flex flex-col justify-center"
->
+        <button
+          aria-label="Close menu"
+          onClick={onClose}
+          className="absolute top-0 right-6 md:right-12 h-20 z-50 w-8 flex flex-col justify-center"
+        >
           <span
             className={`block h-[2px] w-full bg-[#1F1F1F] transition-all duration-500 ease-out origin-center ${
-              open
+              entered
                 ? "rotate-45 translate-y-[5px] opacity-100"
                 : "rotate-0 translate-y-0 opacity-0"
             }`}
           />
           <span
             className={`block h-[2px] w-full bg-[#1F1F1F] transition-all duration-500 ease-out origin-center ${
-              open
+              entered
                 ? "-rotate-45 -translate-y-[5px] opacity-100"
                 : "rotate-0 translate-y-0 opacity-0"
             }`}
           />
         </button>
-
         <div className="grid grid-cols-1 md:grid-cols-[1.3fr_1fr] gap-y-6 gap-x-16 mt-16 md:mt-0">
           <ul>
             {primaryLinks.map((link, i) => (
