@@ -107,7 +107,7 @@ function LegacyBanner({ start }: { start: boolean }) {
         className="absolute inset-0"
         style={{
           backgroundImage: "url('/images/paper-texture.webp')",
-          backgroundSize: "700px",
+          backgroundSize: "2500px",
           backgroundRepeat: "repeat",
         }}
       />
