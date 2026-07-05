@@ -70,7 +70,7 @@ export default function MenuOverlay({ open, onClose }: MenuOverlayProps) {
       aria-modal="true"
     >
       {/* Left image panel - placeholder, swap with client project photography */}
-      <div className="hidden md:block md:w-[45%] h-full relative">
+      <div className="hidden md:block md:w-[57%] h-full relative">
         <Image
           src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1200&auto=format&fit=crop"
           alt=""

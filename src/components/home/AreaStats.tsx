@@ -221,14 +221,25 @@ export default function AreaStats() {
         </div>
 
         {/* Secondary metric - quiet numeric treatment */}
-        <div className="flex justify-center">
-          <SimpleStat
-            value={10}
-            suffix="+"
-            label="Projects Delivered"
-            start={visible}
-          />
-        </div>
+        {/* Secondary metrics - quiet numeric treatment */}
+<div className="grid grid-cols-1 sm:grid-cols-2 gap-x-12 divide-y sm:divide-y-0 sm:divide-x divide-[#DDDDDD] justify-center max-w-xl mx-auto">
+  <div className="sm:pr-12 flex justify-center sm:justify-end">
+    <SimpleStat
+      value={10}
+      suffix="+"
+      label="Projects Delivered"
+      start={visible}
+    />
+  </div>
+  <div className="sm:pl-12 flex justify-center sm:justify-start">
+    <SimpleStat
+      value={75}
+      suffix="+"
+      label="Happy Families"
+      start={visible}
+    />
+  </div>
+</div>
       </div>
     </section>
   );
