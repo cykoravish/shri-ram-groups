@@ -1,6 +1,16 @@
+"use client";
+import { useEffect, useState } from "react";
+import HeroTextCycle from "./HeroTextCycle";
+
 export default function Hero() {
+  const [show, setShow] = useState(false);
+
+  useEffect(() => {
+    const t = setTimeout(() => setShow(true), 100);
+    return () => clearTimeout(t);
+  }, []);
   return (
-   <section className="relative w-full aspect-video lg:aspect-auto lg:h-[calc(100dvh-80px)] overflow-hidden">
+    <section className="relative w-full aspect-video lg:aspect-auto lg:h-[calc(100dvh-80px-70px)] overflow-hidden">
       {/* Poster paints instantly; video swaps in the moment enough has streamed in */}
       <video
         className="absolute inset-0 w-full h-full object-cover"
@@ -14,6 +24,8 @@ export default function Hero() {
       />
       {/* Soft gradient for text legibility - not a hard dark tint */}
       <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/10 to-black/30" />
+
+      <HeroTextCycle />
     </section>
   );
 }

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Lato } from "next/font/google";
+import { Geist, Geist_Mono, Lato, Playfair_Display } from "next/font/google";
 import Header from "../components/Header";
 import "./globals.css";
 
@@ -15,6 +15,12 @@ const geistMono = Geist_Mono({
 
 const lato = Lato({
   variable: "--font-lato",
+  subsets: ["latin"],
+  weight: ["400", "700"],
+});
+
+const playfair = Playfair_Display({
+  variable: "--font-playfair",
   subsets: ["latin"],
   weight: ["400", "700"],
 });
