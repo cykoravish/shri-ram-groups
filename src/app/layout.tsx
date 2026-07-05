@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Lato, Playfair_Display } from "next/font/google";
-import Header from "../components/Header";
+import Header from "@/components/layout/Header";
 import "./globals.css";
+import Script from "next/script";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -59,6 +60,19 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} ${lato.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
+        <Script id="tawk-to-widget" strategy="afterInteractive">
+          {`
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+      var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+      s1.async=true;
+      s1.src='https://embed.tawk.to/6a49ccfd539b7e1d4b7d41e1/1jso4hg4b';
+      s1.charset='UTF-8';
+      s1.setAttribute('crossorigin','*');
+      s0.parentNode.insertBefore(s1,s0);
+    })();
+  `}
+        </Script>
         <Header />
         {children}
       </body>

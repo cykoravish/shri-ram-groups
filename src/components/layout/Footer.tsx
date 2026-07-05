@@ -1,3 +1,6 @@
+import { FaInstagram, FaFacebook, FaLinkedin, FaYoutube } from "react-icons/fa";
+import Link from "next/link";
+
 const quickLinks = [
   { label: "About Us", href: "/about" },
   { label: "Residential", href: "/residential" },
@@ -8,10 +11,10 @@ const quickLinks = [
 ];
 
 const socials = [
-  { label: "Instagram", href: "#" },
-  { label: "Facebook", href: "#" },
-  { label: "LinkedIn", href: "#" },
-  { label: "YouTube", href: "#" },
+  { label: "Instagram", href: "#", icon: FaInstagram },
+  { label: "Facebook", href: "#", icon: FaFacebook },
+  { label: "LinkedIn", href: "#", icon: FaLinkedin },
+  { label: "YouTube", href: "#", icon: FaYoutube },
 ];
 
 export default function Footer() {
@@ -22,7 +25,7 @@ export default function Footer() {
           {/* Brand + address */}
           <div>
             <span className="font-lato font-bold text-2xl text-[#1F1F1F]">
-              Client<span className="text-[#C4A065]">Group</span>
+              3<span className="text-[#C4A065]">Brainz</span>
             </span>
             <p className="font-lato text-sm text-[#707070] mt-4 leading-relaxed max-w-xs">
               Regional Office, NH-24, Ghaziabad, Uttar Pradesh, India
@@ -30,9 +33,7 @@ export default function Footer() {
             <p className="font-lato text-sm text-[#707070] mt-2">
               +91 12345 67890
             </p>
-            <p className="font-lato text-sm text-[#707070]">
-              info@clientgroup.com
-            </p>
+            <p className="font-lato text-sm text-[#707070]">info@3brainz.com</p>
           </div>
 
           {/* Quick links */}
@@ -62,12 +63,13 @@ export default function Footer() {
             <ul className="space-y-2">
               {socials.map((s) => (
                 <li key={s.label}>
-                  <a
+                  <Link
                     href={s.href}
-                    className="font-lato text-sm text-[#707070] hover:text-[#C4A065] transition-colors"
+                    className="flex items-center gap-2 font-lato text-sm text-[#707070] hover:text-[#C4A065] transition-colors"
                   >
+                    <s.icon size={16} />
                     {s.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -75,9 +77,7 @@ export default function Footer() {
         </div>
 
         <div className="flex flex-col sm:flex-row items-center justify-between gap-3 pt-6">
-          <p className="font-lato text-xs text-[#707070] text-center sm:text-left">
-            © {new Date().getFullYear()} ClientGroup. All rights reserved.
-          </p>
+          © {new Date().getFullYear()} 3Brainz. All rights reserved.
           <p className="font-lato text-xs text-[#707070] text-center sm:text-right max-w-md">
             RERA registration details available on request. This is not an
             offer, and does not constitute a contract of any kind.

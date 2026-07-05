@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { FaInstagram, FaYoutube, FaLinkedin, FaFacebook } from "react-icons/fa";
 
 type MenuOverlayProps = {
   open: boolean;
@@ -27,10 +28,10 @@ const secondaryLinks = [
 ];
 
 const socials = [
-  { label: "Instagram", href: "#" },
-  { label: "YouTube", href: "#" },
-  { label: "LinkedIn", href: "#" },
-  { label: "Facebook", href: "#" },
+  { label: "Instagram", href: "#", icon: FaInstagram },
+  { label: "YouTube", href: "#", icon: FaYoutube },
+  { label: "LinkedIn", href: "#", icon: FaLinkedin },
+  { label: "Facebook", href: "#", icon: FaFacebook },
 ];
 
 export default function MenuOverlay({ open, onClose }: MenuOverlayProps) {
@@ -62,7 +63,7 @@ export default function MenuOverlay({ open, onClose }: MenuOverlayProps) {
   return (
     <div
       id="site-menu-overlay"
-     className={`fixed inset-0 z-50 flex overflow-x-hidden transition-transform ease-[cubic-bezier(0.65,0,0.35,1)] ${
+      className={`fixed inset-0 z-50 flex overflow-x-hidden transition-transform ease-[cubic-bezier(0.65,0,0.35,1)] ${
         open ? "duration-700 translate-x-0" : "duration-400 -translate-x-full"
       }`}
       role="dialog"
@@ -149,14 +150,15 @@ export default function MenuOverlay({ open, onClose }: MenuOverlayProps) {
 
         <div className="flex flex-wrap gap-x-5 gap-y-3 mt-12">
           {socials.map((s) => (
-            <a
+            <Link
               key={s.label}
               href={s.href}
               aria-label={s.label}
-              className="text-[#707070] hover:text-[#C4A065] transition-colors text-sm uppercase tracking-wide"
+              className="flex items-center gap-2 text-[#707070] hover:text-[#C4A065] transition-colors text-sm uppercase tracking-wide"
             >
+              <s.icon size={16} />
               {s.label}
-            </a>
+            </Link>
           ))}
         </div>
       </div>

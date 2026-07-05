@@ -1,7 +1,7 @@
 import AreaStats from "@/components/home/AreaStats";
 import CtaBand from "@/components/home/CtaBand";
 import FeaturedCommunities from "@/components/home/Featuredcommunities ";
-import Footer from "@/components/home/Footer";
+import Footer from "@/components/layout/Footer";
 import Hero from "@/components/home/Hero";
 import LegacyBand from "@/components/home/Legacyband";
 import Testimonials from "@/components/home/Testimonials";
