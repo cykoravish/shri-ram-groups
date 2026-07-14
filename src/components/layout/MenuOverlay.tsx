@@ -14,17 +14,17 @@ const primaryLinks = [
   { label: "About", href: "/about" },
   { label: "Residential", href: "/residential" },
   { label: "Commercial", href: "/commercial" },
-  { label: "Awards", href: "/awards" },
-  { label: "Blogs", href: "/blogs" },
+  // { label: "Awards", href: "/awards" },
+  // { label: "Blogs", href: "/blogs" },
   { label: "Events", href: "/events" },
-  { label: "In The News", href: "/in-the-news" },
-  { label: "Community", href: "/community" },
+  // { label: "In The News", href: "/in-the-news" },
+  // { label: "Community", href: "/community" },
   { label: "Contact Us", href: "/contact-us" },
 ];
 
 const secondaryLinks = [
   { label: "Company", href: "/company" },
-  { label: "Careers", href: "/careers" },
+  // { label: "Careers", href: "/careers" },
 ];
 
 const socials = [
