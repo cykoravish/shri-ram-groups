@@ -1,16 +1,28 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import MenuOverlay from "./MenuOverlay";
 import { ChevronDown, Phone } from "lucide-react";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 10);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   return (
     <>
-      <header className="relative w-full z-40 px-6 md:px-12 h-20 flex items-center justify-between bg-white">
+      <header
+        className={`sticky top-0 w-full z-40 px-6 md:px-12 h-20 flex items-center justify-between bg-white transition-shadow duration-300 motion-reduce:transition-none ${
+          scrolled ? "shadow-[0_2px_12px_rgba(0,0,0,0.08)]" : "shadow-none"
+        }`}
+      >
         {/* Placeholder logo - swap with client's actual logo asset */}
         <Link href="/" className="flex flex-col leading-tight">
           <span className="font-lato font-bold text-2xl tracking-wide text-[#4F4F4F]">
