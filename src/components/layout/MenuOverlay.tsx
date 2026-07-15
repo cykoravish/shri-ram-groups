@@ -23,7 +23,7 @@ const primaryLinks = [
 ];
 
 const secondaryLinks = [
-  { label: "Company", href: "/company" },
+  { label: "Company", href: "/about" },
   // { label: "Careers", href: "/careers" },
 ];
 

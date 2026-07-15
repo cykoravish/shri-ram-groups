@@ -7,28 +7,39 @@ import { ChevronDown, Phone } from "lucide-react";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
+  const [solid, setSolid] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 10);
+    const onScroll = () => setSolid(window.scrollY > 60);
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  const linkColor = solid ? "text-[#4F4F4F]" : "text-white";
+  const barColor = menuOpen || solid ? "bg-[#1F1F1F]" : "bg-white";
+
   return (
     <>
       <header
-        className={`sticky top-0 w-full z-40 px-6 md:px-12 h-20 flex items-center justify-between bg-white transition-shadow duration-300 motion-reduce:transition-none ${
-          scrolled ? "shadow-[0_2px_12px_rgba(0,0,0,0.08)]" : "shadow-none"
+        className={`fixed top-0 w-full z-40 px-6 md:px-12 h-20 flex items-center justify-between transition-all duration-300 motion-reduce:transition-none ${
+          solid ? "bg-white shadow-[0_2px_12px_rgba(0,0,0,0.08)]" : "bg-transparent shadow-none"
         }`}
       >
         {/* Placeholder logo - swap with client's actual logo asset */}
         <Link href="/" className="flex flex-col leading-tight">
-          <span className="font-lato font-bold text-2xl tracking-wide text-[#4F4F4F]">
+          <span
+            className={`font-lato font-bold text-2xl tracking-wide transition-colors duration-300 motion-reduce:transition-none ${
+              solid ? "text-[#4F4F4F]" : "text-white"
+            }`}
+          >
             ShriRam<span className="text-[#C4A065]">Group</span>
           </span>
-          <span className="font-lato text-[10px] tracking-[0.2em] uppercase text-[#707070]">
+          <span
+            className={`font-lato text-[10px] tracking-[0.2em] uppercase transition-colors duration-300 motion-reduce:transition-none ${
+              solid ? "text-[#707070]" : "text-white/70"
+            }`}
+          >
             Experience Excellence
           </span>
         </Link>
@@ -36,7 +47,9 @@ export default function Header() {
         <div className="flex items-center gap-10 md:gap-14">
           <div className="hidden md:flex items-center gap-8">
             <div className="group relative">
-              <button className="flex items-center gap-1.5 font-lato font-bold text-sm tracking-wide uppercase text-[#4F4F4F] hover:text-[#C4A065] transition-colors">
+              <button
+                className={`flex items-center gap-1.5 font-lato font-bold text-sm tracking-wide uppercase transition-colors duration-300 hover:text-[#C4A065] motion-reduce:transition-none ${linkColor}`}
+              >
                 Our Projects
                 <ChevronDown
                   size={16}
@@ -49,7 +62,7 @@ export default function Header() {
                   {[
                     { label: "Residential", href: "/residential" },
                     { label: "Commercial", href: "/commercial" },
-                    // { label: "Hospitality", href: "/hospitality" },
+                    { label: "Hospitality", href: "/hospitality" },
                   ].map((item) => (
                     <Link
                       key={item.href}
@@ -65,7 +78,7 @@ export default function Header() {
 
             <Link
               href="/contact-us"
-              className="flex items-center gap-2 font-lato font-bold text-sm tracking-wide uppercase text-[#4F4F4F] hover:text-[#C4A065] transition-colors"
+              className={`flex items-center gap-2 font-lato font-bold text-sm tracking-wide uppercase transition-colors duration-300 hover:text-[#C4A065] motion-reduce:transition-none ${linkColor}`}
             >
               <Phone size={16} />
               Get In Touch
@@ -81,14 +94,14 @@ export default function Header() {
             className="relative z-50 w-8 h-3 flex flex-col justify-between group"
           >
             <span
-              className={`block h-[2px] w-full bg-[#1F1F1F] transition-transform ease-in-out origin-center ${menuOpen ? "duration-500" : "duration-200"} ${
-                menuOpen ? "rotate-45 translate-y-[5px]" : ""
-              }`}
+              className={`block h-[2px] w-full transition-[background-color,transform] ease-in-out origin-center ${
+                menuOpen ? "duration-500" : "duration-200"
+              } ${barColor} ${menuOpen ? "rotate-45 translate-y-[5px]" : ""}`}
             />
             <span
-              className={`block h-[2px] w-full bg-[#1F1F1F] transition-transform ease-in-out origin-center ${menuOpen ? "duration-500" : "duration-200"} ${
-                menuOpen ? "-rotate-45 -translate-y-[5px]" : ""
-              }`}
+              className={`block h-[2px] w-full transition-[background-color,transform] ease-in-out origin-center ${
+                menuOpen ? "duration-500" : "duration-200"
+              } ${barColor} ${menuOpen ? "-rotate-45 -translate-y-[5px]" : ""}`}
             />
           </button>
         </div>
