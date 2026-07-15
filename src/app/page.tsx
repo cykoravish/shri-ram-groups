@@ -10,7 +10,7 @@ import WhyChooseUs from "@/components/home/WhyChooseUs";
 export default function Home() {
   return (
     <>
-    <Hero />
+      <Hero />
       <AreaStats />
       <LegacyBand />
       <FeaturedCommunities />
