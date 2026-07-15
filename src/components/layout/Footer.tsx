@@ -5,8 +5,8 @@ const quickLinks = [
   { label: "About Us", href: "/about" },
   { label: "Residential", href: "/residential" },
   { label: "Commercial", href: "/commercial" },
-  { label: "Community", href: "/community" },
-  { label: "Careers", href: "/careers" },
+  // { label: "Community", href: "/community" },
+  // { label: "Careers", href: "/careers" },
   { label: "Contact Us", href: "/contact-us" },
 ];
 
@@ -77,7 +77,17 @@ export default function Footer() {
         </div>
 
         <div className="flex flex-col sm:flex-row items-center justify-between gap-3 pt-6">
-          © {new Date().getFullYear()} 3Brainz. All rights reserved.
+          <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4">
+            <span className="font-lato text-sm text-[#707070]">
+              © {new Date().getFullYear()} 3Brainz. All rights reserved.
+            </span>
+            <Link
+              href="/privacy-policy"
+              className="font-lato text-sm text-[#707070] hover:text-[#C4A065] transition-colors underline underline-offset-2"
+            >
+              Privacy Policy
+            </Link>
+          </div>
           <p className="font-lato text-xs text-[#707070] text-center sm:text-right max-w-md">
             RERA registration details available on request. This is not an
             offer, and does not constitute a contract of any kind.

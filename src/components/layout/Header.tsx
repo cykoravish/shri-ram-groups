@@ -49,7 +49,7 @@ export default function Header() {
                   {[
                     { label: "Residential", href: "/residential" },
                     { label: "Commercial", href: "/commercial" },
-                    { label: "Hospitality", href: "/hospitality" },
+                    // { label: "Hospitality", href: "/hospitality" },
                   ].map((item) => (
                     <Link
                       key={item.href}
