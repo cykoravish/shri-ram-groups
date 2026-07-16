@@ -62,7 +62,7 @@ export default function Header() {
                   {[
                     { label: "Residential", href: "/residential" },
                     { label: "Commercial", href: "/commercial" },
-                    { label: "Hospitality", href: "/hospitality" },
+                    // { label: "Hospitality", href: "/hospitality" },
                   ].map((item) => (
                     <Link
                       key={item.href}
@@ -81,7 +81,7 @@ export default function Header() {
               className={`flex items-center gap-2 font-lato font-bold text-sm tracking-wide uppercase transition-colors duration-300 hover:text-[#C4A065] motion-reduce:transition-none ${linkColor}`}
             >
               <Phone size={16} />
-              Get In Touch
+              Contact Us
             </Link>
           </div>
 

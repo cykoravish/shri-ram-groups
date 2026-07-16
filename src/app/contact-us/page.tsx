@@ -3,6 +3,7 @@ import ContactHero from "@/components/contact/Contacthero";
 import ContactInfoBand from "@/components/contact/Contactinfoband";
 import ContactForm from "@/components/contact/Contactform";
 import Footer from "@/components/layout/Footer";
+import LocationMap from "@/components/contact/LocationMap";
 
 export const metadata: Metadata = {
   title: "Contact Us | ShriRam Group",
@@ -16,6 +17,7 @@ export default function ContactUsPage() {
       <ContactHero />
       <ContactInfoBand />
       <ContactForm />
+      <LocationMap />
       <Footer />
     </>
   );

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import AboutHero from "@/components/about/AboutHero";
+import PageBanner from "@/components/residential/PageBanner";
 import OurStory from "@/components/about/OurStory";
 import AwardsSection from "@/components/about/AwardsSection";
 import VisionMission from "@/components/about/VisionMission";
@@ -15,7 +15,12 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <>
-      <AboutHero />
+      <PageBanner
+        image="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?q=80&w=1600&auto=format&fit=crop"
+        title="About Us"
+        subtitle="Our Legacy"
+      />
+
       <OurStory />
       <AwardsSection />
       <VisionMission />

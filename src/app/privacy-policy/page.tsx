@@ -1,17 +1,19 @@
 import type { Metadata } from "next";
 import LegalPageHeader from "@/components/legal/LegalPageHeader";
+import PageBanner from "@/components/residential/PageBanner";
 import Footer from "@/components/layout/Footer";
 
 export const metadata: Metadata = {
   title: "Privacy Policy | ShriRam Group",
-  description: "How ShriRam Group collects, uses, and protects your information.",
+  description:
+    "How ShriRam Group collects, uses, and protects your information.",
 };
 
 const sections = [
   {
     heading: "1. Introduction",
     body: [
-      "ShriRam Group (\"we\", \"us\", \"our\") respects your privacy and is committed to protecting the personal information you share with us. This Privacy Policy explains what information we collect, how we use it, and the choices you have.",
+      'ShriRam Group ("we", "us", "our") respects your privacy and is committed to protecting the personal information you share with us. This Privacy Policy explains what information we collect, how we use it, and the choices you have.',
       "By using our website or sharing your details with us — for example, through an enquiry form or by contacting our sales team — you agree to the practices described in this policy.",
     ],
   },
@@ -77,10 +79,23 @@ const sections = [
 export default function PrivacyPolicyPage() {
   return (
     <>
-      <LegalPageHeader title="Privacy Policy" updated="15 July 2026" />
+      <PageBanner
+        image="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=1600&auto=format&fit=crop"
+        title="Privacy Policy"
+        subtitle="Legal Information"
+      />
+
+      <div className="bg-[#F7F7F7] py-4 border-b border-[#E5E5E5]">
+        <div className="max-w-4xl mx-auto px-6">
+          <p className="font-lato text-sm text-[#707070]">
+            Last Updated:{" "}
+            <span className="font-medium text-[#1F1F1F]">15 July 2026</span>
+          </p>
+        </div>
+      </div>
 
       <section className="w-full bg-white py-14 md:py-20">
-        <div className="max-w-3xl mx-auto px-6">
+        <div className="max-w-4xl mx-auto px-6">
           {sections.map((s) => (
             <div key={s.heading} className="mb-10 last:mb-0">
               <h2 className="font-playfair text-xl md:text-2xl text-[#1F1F1F] mb-4">

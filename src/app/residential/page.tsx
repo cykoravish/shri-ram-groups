@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import ResidentialHero from "@/components/residential/ResidentialHero";
-import FeaturedProjects from "@/components/residential/FeaturedProjects";
-import DeliveredGrid from "@/components/residential/DeliveredGrid";
-import ProofStrip from "@/components/residential/ProofStrip";
+import PageBanner from "@/components/residential/PageBanner";
+import ResidentialSpotlight from "@/components/residential/ResidentialSpotlight";
+import ProjectsGrid from "@/components/residential/ProjectsGrid";
+import StatsStrip from "@/components/residential/StatsStrip";
 import Footer from "@/components/layout/Footer";
 
 export const metadata: Metadata = {
@@ -14,10 +14,14 @@ export const metadata: Metadata = {
 export default function ResidentialPage() {
   return (
     <>
-      <ResidentialHero />
-      <FeaturedProjects />
-      <DeliveredGrid />
-      <ProofStrip />
+      <PageBanner
+        image="https://images.unsplash.com/photo-1600210492493-0946911123ea?q=80&w=1600&auto=format&fit=crop"
+        title="Explore Our Projects"
+        subtitle="Our Residences"
+      />
+      <ResidentialSpotlight />
+      <StatsStrip />
+      <ProjectsGrid />
       <Footer />
     </>
   );
