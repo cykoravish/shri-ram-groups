@@ -1,5 +1,6 @@
 import { FaInstagram, FaFacebook, FaLinkedin, FaYoutube } from "react-icons/fa";
 import Link from "next/link";
+import Image from "next/image";
 
 const quickLinks = [
   { label: "About Us", href: "/about" },
@@ -24,9 +25,13 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-[1.3fr_1fr_1fr] gap-10 md:gap-8 pb-12 border-b border-[#DDDDDD]">
           {/* Brand + address */}
           <div>
-            <span className="font-lato font-bold text-2xl text-[#1F1F1F]">
-              3<span className="text-[#C4A065]">Brainz</span>
-            </span>
+            <Image
+              src="/images/shriram-logo-footer.png"
+              alt="Shriram Realty"
+              width={310}
+              height={320}
+              className="h-16 w-auto"
+            />
             <p className="font-lato text-sm text-[#707070] mt-4 leading-relaxed max-w-xs">
               Regional Office, NH-24, Ghaziabad, Uttar Pradesh, India
             </p>
