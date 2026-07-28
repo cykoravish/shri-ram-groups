@@ -10,7 +10,7 @@ export default function Hero() {
     return () => clearTimeout(t);
   }, []);
   return (
-    <section className="relative w-full aspect-video lg:aspect-auto lg:h-[calc(100dvh-80px-70px)] overflow-hidden">
+    <section className="relative w-full aspect-[4/3] sm:aspect-video lg:aspect-auto lg:h-[calc(100dvh-80px-70px)] overflow-hidden">
       {/* Poster paints instantly; video swaps in the moment enough has streamed in */}
       <video
         className="absolute inset-0 w-full h-full object-cover"
