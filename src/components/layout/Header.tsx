@@ -30,32 +30,32 @@ export default function Header() {
         }`}
       >
         {/* Placeholder logo - swap with client's actual logo asset */}
-      <Link href="/" className="flex items-center gap-3">
-  <Image
-    src="/images/shriram-logo-header.png"
-    alt="Shriram Realty"
-    width={152}
-    height={200}
-    priority
-    className="h-10 w-auto md:h-12 transition-all duration-300"
-  />
-  <div className="flex flex-col leading-tight">
-    <span
-      className={`font-lato font-bold text-2xl tracking-wide transition-colors duration-300 motion-reduce:transition-none ${
-        solid ? "text-[#4F4F4F]" : "text-white"
-      }`}
-    >
-      ShriRam<span className="text-[#C4A065]">Group</span>
-    </span>
-    <span
-      className={`font-lato text-[10px] tracking-[0.2em] uppercase transition-colors duration-300 motion-reduce:transition-none ${
-        solid ? "text-[#707070]" : "text-white/70"
-      }`}
-    >
-      Experience Excellence
-    </span>
-  </div>
-</Link>
+        <Link href="/" className="flex items-center gap-3">
+          <Image
+            src="/images/shriram-logo-header.png"
+            alt="Shriram Realty"
+            width={152}
+            height={200}
+            priority
+            className="h-10 w-auto md:h-12 transition-all duration-300"
+          />
+          <div className="flex flex-col leading-tight">
+            <span
+              className={`font-lato font-bold text-lg sm:text-xl md:text-2xl tracking-wide transition-colors duration-300 motion-reduce:transition-none ${
+                solid ? "text-[#4F4F4F]" : "text-white"
+              }`}
+            >
+              ShriRam<span className="text-[#C4A065]">Group</span>
+            </span>
+            <span
+              className={`font-lato text-[9px] sm:text-[10px] tracking-[0.2em] uppercase transition-colors duration-300 motion-reduce:transition-none ${
+                solid ? "text-[#707070]" : "text-white/70"
+              }`}
+            >
+              Experience Excellence
+            </span>
+          </div>
+        </Link>
 
         <div className="flex items-center gap-10 md:gap-14">
           <div className="hidden md:flex items-center gap-8">
