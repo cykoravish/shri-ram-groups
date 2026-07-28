@@ -37,7 +37,7 @@ export default function HeroTextCycle() {
   const variant = animationVariants[index % animationVariants.length];
 
   return (
-    <div className="absolute top-10 md:top-14 left-1/2 -translate-x-1/2 z-10 text-center px-4 max-w-md md:max-w-xl lg:max-w-2xl">
+    <div className="absolute top-28 md:top-32 lg:top-36 left-1/2 -translate-x-1/2 z-10 text-center px-4 max-w-md md:max-w-xl lg:max-w-2xl">
       <p
         className={`font-playfair font-normal text-xl md:text-2xl lg:text-3xl tracking-wider text-white leading-tight transition-all duration-700 ease-in-out ${
           visible ? variant.visible : variant.hidden
