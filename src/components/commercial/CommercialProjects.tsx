@@ -2,13 +2,12 @@ import CommercialProjectRow from "./CommercialProjectRow";
 
 const projects = [
   {
-    name: "The Exchange",
-    location: "Sector 135,",
+    name: "ShriRam Business Centre",
+    location: "Sector 19,",
     city: "Noida",
     description:
-      "Located on the Noida Expressway, this developed sector provides numerous advantages to elevate your business.",
-    image:
-      "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1200&auto=format&fit=crop",
+      "A modern glass-fronted business address with Grade-A office and retail space, currently home to an IDBI Bank branch — designed to elevate your business presence.",
+    image: "/images/shriram-business-centre-hero.webp",
     href: "#",
   },
   {

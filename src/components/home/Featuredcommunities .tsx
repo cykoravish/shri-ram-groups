@@ -5,29 +5,25 @@ const projects = [
     name: "The Meadows",
     location: "Ghaziabad",
     type: "Residential",
-    image:
-      "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?q=80&w=1000&auto=format&fit=crop",
+    image: "/images/shriram-residential-wide-1.webp",
   },
   {
     name: "Skyline Heights",
     location: "Ghaziabad",
     type: "Residential",
-    image:
-      "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=1000&auto=format&fit=crop",
+    image: "/images/shriram-residential-wide-2.webp",
   },
   {
     name: "Business Square",
     location: "Ghaziabad",
     type: "Commercial",
-    image:
-      "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1000&auto=format&fit=crop",
+    image: "/images/shriram-business-centre-hero.webp",
   },
   {
     name: "Garden Residency",
     location: "Ghaziabad",
     type: "Residential",
-    image:
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1000&auto=format&fit=crop",
+    image: "/images/shriram-heights-building.webp",
   },
 ];
 

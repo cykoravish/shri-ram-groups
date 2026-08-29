@@ -83,8 +83,8 @@ export default function LegacyBand() {
 
           <div className="relative aspect-[4/5] md:aspect-[4/5] w-full overflow-hidden">
             <img
-              src="https://images.unsplash.com/photo-1755735340764-3b077cab0c5c?fm=jpg&q=80&w=1200&auto=format&fit=crop"
-              alt="Landmark development by the group"
+              src="/images/shriram-residential-lifestyle.webp"
+              alt="Landmark development by Shriram Realty"
               className="w-full h-full object-cover"
             />
           </div>

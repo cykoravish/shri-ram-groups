@@ -15,7 +15,7 @@ export const projects: Project[] = [
     name: "Shriram Heights",
     status: "New Launch",
     location: "Ghaziabad",
-    image: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?q=80&w=1200&auto=format&fit=crop",
+    image: "/images/shriram-heights-building.webp",
     href: "#",
     featured: true,
     description:
@@ -26,7 +26,7 @@ export const projects: Project[] = [
     name: "Skyline Heights",
     status: "Ready to Move",
     location: "Ghaziabad",
-    image: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=800&auto=format&fit=crop",
+    image: "/images/shriram-residential-wide-1.webp",
     href: "#",
   },
   {
@@ -34,7 +34,7 @@ export const projects: Project[] = [
     name: "Garden Residency",
     status: "Under Construction",
     location: "Ghaziabad",
-    image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800&auto=format&fit=crop",
+    image: "/images/shriram-residential-lifestyle.webp",
     href: "#",
   },
   {
@@ -42,7 +42,7 @@ export const projects: Project[] = [
     name: "Silver Birch",
     status: "Delivered",
     location: "Ghaziabad",
-    image: "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?q=80&w=800&auto=format&fit=crop",
+    image: "/images/shriram-residential-wide-2.webp",
     href: "#",
   },
   {
@@ -50,7 +50,7 @@ export const projects: Project[] = [
     name: "Crescent Court",
     status: "Delivered",
     location: "Ghaziabad",
-    image: "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800&auto=format&fit=crop",
+    image: "/images/shriram-residential-complex-watermarked.webp",
     href: "#",
   },
   {
