@@ -16,7 +16,7 @@ export default function AboutPage() {
   return (
     <>
       <PageBanner
-        image="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?q=80&w=1600&auto=format&fit=crop"
+        image="/images/shriram-residential-wide-1.webp"
         title="About Us"
         subtitle="Our Legacy"
       />

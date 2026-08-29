@@ -15,7 +15,7 @@ export default function EventsPage() {
     <>
       {/* <EventsHero /> */}
       <PageBanner
-        image="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?q=80&w=1600&auto=format&fit=crop"
+        image="/images/shriram-residential-lifestyle.webp"
         title="Events"
         subtitle="Your Home, Your Community"
       />

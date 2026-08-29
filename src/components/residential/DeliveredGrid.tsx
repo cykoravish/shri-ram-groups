@@ -7,36 +7,31 @@ const delivered = [
     name: "Silver Birch",
     location: "Indirapuram",
     desc: "Where nature's beauty embraces exquisite living. Enjoy abundant greenery and opulence.",
-    image:
-      "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?q=80&w=800&auto=format&fit=crop",
+    image: "/images/shriram-residential-wide-2.webp",
   },
   {
     name: "Crescent Court",
     location: "Greater Noida West",
     desc: "Exquisitely fashioned and tenderly nurtured, resplendent with world-class amenities.",
-    image:
-      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800&auto=format&fit=crop",
+    image: "/images/shriram-residential-complex-watermarked.webp",
   },
   {
     name: "Meridian Homes",
     location: "Sector 143, Noida",
     desc: "Setting a new benchmark for refined living in a pristine, well-connected locale.",
-    image:
-      "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?q=80&w=800&auto=format&fit=crop",
+    image: "/images/shriram-residential-wide-1.webp",
   },
   {
     name: "The Willows",
     location: "Indirapuram",
     desc: "A majestic sanctuary nestled within easy reach of metropolitan conveniences.",
-    image:
-      "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=800&auto=format&fit=crop",
+    image: "/images/shriram-heights-building.webp",
   },
   {
     name: "Cedar Grove",
     location: "Indirapuram",
     desc: "A luxurious lifestyle where comfort and security take center stage.",
-    image:
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800&auto=format&fit=crop",
+    image: "/images/shriram-residential-lifestyle.webp",
   },
   {
     name: "Amber Residency",
