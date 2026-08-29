@@ -9,7 +9,7 @@ import Footer from "@/components/layout/Footer";
 export const metadata: Metadata = {
   title: "About Us | ShriRam Group",
   description:
-    "25 years of building trust, timeless design, and thriving communities across Ghaziabad and NCR.",
+    "30 years of building trust, timeless design, and thriving communities across Ghaziabad and NCR.",
 };
 
 export default function AboutPage() {

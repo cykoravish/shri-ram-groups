@@ -22,7 +22,7 @@ export default function ResidentialSpotlight() {
         style={{ clipPath: "polygon(100% 100%, 100% 0, 0 100%)" }}
       />
       <span className="pointer-events-none absolute -top-6 right-6 md:right-16 font-playfair text-[140px] md:text-[220px] leading-none text-white/[0.03] select-none">
-        25
+        30
       </span>
 
       <div className="relative max-w-6xl mx-auto px-6 -mt-8 md:-mt-12">

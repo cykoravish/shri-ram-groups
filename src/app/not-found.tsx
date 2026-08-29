@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function NotFound() {
   return (
     <section className="relative w-full min-h-[80vh] flex items-center justify-center bg-[#F7F7F7] px-6 overflow-hidden">
-      {/* Large quiet watermark numeral - consistent with the "25" motif used elsewhere */}
+      {/* Large quiet watermark numeral - consistent with the "30" motif used elsewhere */}
       <span
         aria-hidden="true"
         className="absolute font-lato font-bold text-[14rem] md:text-[22rem] text-[#C4A065]/10 leading-none select-none"

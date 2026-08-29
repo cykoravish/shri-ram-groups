@@ -15,7 +15,7 @@ const leaders = [
     title: "Managing Director",
     image:
       "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=600&auto=format&fit=crop",
-    bio: "A driving force behind the group's residential portfolio across NCR, Vinod brings 25 years of hands-on development expertise and an unwavering focus on quality.",
+    bio: "A driving force behind the group's residential portfolio across NCR, Vinod brings 30 years of hands-on development expertise and an unwavering focus on quality.",
   },
   {
     name: "Arjun Mehta",

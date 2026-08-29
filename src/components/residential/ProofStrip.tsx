@@ -31,7 +31,7 @@ export default function ProofStrip() {
         }`}
       >
         <span className="font-playfair text-2xl text-[#1F1F1F]">
-          25<span className="text-[#C4A065]">+</span> Years of Building Excellence
+          30<span className="text-[#C4A065]">+</span> Years of Building Excellence
         </span>
         <div className="flex items-center gap-3 border border-[#DDDDDD] px-6 py-3">
           <span className="font-lato font-bold text-sm text-[#1F1F1F]">Google Rating</span>

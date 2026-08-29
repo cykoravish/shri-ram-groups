@@ -9,7 +9,6 @@ export default function StatsStrip() {
   // Derived from real data, but expressed qualitatively — no bare counts on display
   const hasDelivered = projects.some((p) => p.status === "Delivered");
   const hasOngoing = projects.some((p) => p.status !== "Delivered");
-  const multipleLocations = new Set(projects.map((p) => p.location)).size > 1;
 
   const highlights = [
     {
@@ -26,10 +25,8 @@ export default function StatsStrip() {
     },
     {
       icon: MapPinned,
-      title: multipleLocations ? "Growing Footprint" : "Rooted Locally",
-      desc: multipleLocations
-        ? "Presence across Ghaziabad and Noida's most sought-after sectors."
-        : "Deep roots in the community we've built for over two decades.",
+      title: "Growing Footprint",
+      desc: "An ever-increasing presence across Ghaziabad, raising the standard of living.",
     },
     {
       icon: Star,

@@ -81,15 +81,15 @@ export default function VisionMission() {
     <section className="w-full bg-white py-8 md:py-12">
       <div className="max-w-6xl mx-auto px-6 divide-y divide-[#DDDDDD]">
         <Row
-          label="Vision"
+          label="Our Vision"
           heading="Where We're Headed"
-          copy="To be among North India's most trusted real estate names, shaping communities that balance modern living with lasting value — building responsibly for the generations who will inherit what we create."
+          copy="To create thriving communities that set new benchmarks for quality living and contribute to the evolving landscape of modern India."
           Icon={Eye}
         />
         <Row
-          label="Mission"
+          label="Our Mission"
           heading="How We Get There"
-          copy="Our mission is simple: build trust before buildings. We deliver every project on the promise of quality, transparency, and timely handover, while fostering strong, connected communities in every space we create."
+          copy="To deliver thoughtfully planned homes with uncompromising quality, timely execution and transparent practices while creating a better standard of living for every community we build."
           Icon={Target}
           reverse
         />

@@ -61,31 +61,29 @@ export default function OurStory() {
           }`}
         >
           <span className="font-lato text-xs tracking-[0.3em] uppercase text-[#C4A065]">
-            Our Story
+            Our Legacy
           </span>
           <h2 className="font-playfair text-3xl md:text-4xl text-[#1F1F1F] mt-4 mb-6 leading-tight">
-            25 Years in the Making
+            30 Years of Building Excellence
           </h2>
           <p className="font-lato text-sm md:text-base text-[#707070] leading-relaxed mb-5">
-            Founded in Ghaziabad, ShriRam Group&apos;s journey over the past 25
-            years has been defined by careful growth, considered design, and
-            an unwavering focus on the people who call our developments
-            home. What began as a single residential project has grown into
-            a portfolio spanning residential communities and commercial
-            spaces across the region.
+            Our legacy is built on trust, quality and a commitment to
+            creating spaces that add lasting value to people&apos;s lives. As
+            we grow, our focus remains unchanged — to build better, live
+            better and contribute meaningfully to the communities around us.
           </p>
           <p className="font-lato text-sm md:text-base text-[#707070] leading-relaxed mb-5">
-            Trust is the foundation everything else is built on. From site
-            selection to material sourcing to the final handover, our teams
-            work to a single standard — build as if it were for our own
-            family. That discipline is why so many of our residents
-            recommend us to theirs.
+            With a strong and growing presence in Ghaziabad, we have earned
+            the trust of our customers through consistent quality,
+            transparency and timely delivery. Our strong partnerships
+            further strengthen our foundation, bringing together shared
+            values, expertise and a commitment to building better
+            communities.
           </p>
           <p className="font-lato text-sm md:text-base text-[#707070] leading-relaxed">
-            Every ShriRam Group development balances the practical and the
-            aspirational: accessible connectivity and thoughtful
-            landscaping, robust construction and genuinely liveable spaces.
-            It&apos;s a balance we&apos;ve spent 25 years learning to get right.
+            With every project, we strive to raise the benchmark for urban
+            living, creating homes and communities that are built for
+            today, while keeping tomorrow in mind.
           </p>
         </div>
       </div>

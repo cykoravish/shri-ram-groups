@@ -55,8 +55,8 @@ function BigBlockStat({
       />
 
       <div className="relative z-10 h-full flex items-center justify-center">
-        <span className="font-lato font-bold text-6xl md:text-7xl lg:text-8xl text-[#1F1F1F] leading-none">
-          {count}
+        <span className="font-lato font-bold text-5xl md:text-6xl lg:text-7xl text-[#1F1F1F] leading-none">
+          {count.toLocaleString("en-IN")}
           <span className="text-3xl md:text-4xl align-top ml-1">{suffix}</span>
         </span>
       </div>
@@ -98,7 +98,7 @@ function SimpleStat({
 }
 
 function LegacyBanner({ start }: { start: boolean }) {
-  const years = useCountUp(25, start);
+  const years = useCountUp(30, start);
 
   return (
     <div className="relative w-full overflow-hidden">
@@ -115,7 +115,7 @@ function LegacyBanner({ start }: { start: boolean }) {
 
       {/* Ghost watermark number for depth */}
       <span className="pointer-events-none select-none absolute -left-4 md:left-10 top-1/2 -translate-y-1/2 font-lato font-bold text-[14rem] md:text-[22rem] leading-none text-[#1F1F1F]/[0.04]">
-        25
+        30
       </span>
 
       <div className="relative z-10 max-w-6xl mx-auto px-6 py-16 md:py-24 flex flex-col md:flex-row items-center gap-10 md:gap-14">
@@ -146,10 +146,10 @@ function LegacyBanner({ start }: { start: boolean }) {
           </h3>
           <span className="block w-16 h-[3px] bg-[#C4A065] my-4 mx-auto md:mx-0" />
           <p className="font-lato text-sm md:text-base text-[#707070] max-w-xl leading-relaxed">
-            With utmost respect for our communities, we meticulously design
-            timeless residences, spanning well-planned neighborhoods to majestic
-            high-rises. Our unwavering commitment to discerning clients
-            guarantees enduring grandeur.
+            At Shriram Realty, we believe a better life begins with a better
+            place to live, grow and thrive. For over 30 years, we have been
+            building spaces for people who aspire to move ahead, achieve more
+            and create a life they can be proud of.
           </p>
         </div>
       </div>
@@ -199,22 +199,22 @@ export default function AreaStats() {
             Our Scale
           </span>
           <p className="font-lato text-[#707070] text-sm md:text-base mt-3 max-w-md mx-auto">
-            Two and a half decades of shaping Ghaziabad&apos;s skyline.
+            Three decades of shaping Ghaziabad&apos;s skyline.
           </p>
         </div>
 
         {/* Primary metrics - two-tone diagonal blocks */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-1 md:gap-2 mb-12 md:mb-16">
           <BigBlockStat
-            value={20}
-            suffix="M+"
-            label="Sq. Ft. Area Developed"
+            value={900000}
+            suffix="+"
+            label="Sq. Ft. Approx. Area Delivered"
             start={visible}
           />
           <BigBlockStat
-            value={5}
-            suffix="M+"
-            label="Sq. Ft. Under Development"
+            value={2}
+            suffix=""
+            label="Ongoing Projects"
             reverse
             start={visible}
           />
@@ -225,17 +225,17 @@ export default function AreaStats() {
 <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-12 divide-y sm:divide-y-0 sm:divide-x divide-[#DDDDDD] justify-center max-w-xl mx-auto">
   <div className="sm:pr-12 flex justify-center sm:justify-end">
     <SimpleStat
-      value={10}
+      value={700}
       suffix="+"
-      label="Projects Delivered"
+      label="Happy Customers"
       start={visible}
     />
   </div>
   <div className="sm:pl-12 flex justify-center sm:justify-start">
     <SimpleStat
-      value={75}
-      suffix="+"
-      label="Happy Families"
+      value={26}
+      suffix=""
+      label="Projects Successfully Delivered"
       start={visible}
     />
   </div>

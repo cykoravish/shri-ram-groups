@@ -2,7 +2,7 @@ const usps = [
   {
     title: "Timely Delivery",
     description:
-      "25 years of handing over keys on the date we promised — not a day later.",
+      "We honor our commitments and your trust with homes delivered on time, every time.",
     icon: (
       <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
         <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="1.5" />
@@ -13,7 +13,7 @@ const usps = [
   {
     title: "Uncompromising Quality",
     description:
-      "Every material, fitting, and finish is chosen to outlast trends and last generations.",
+      "From construction materials to final finishes, we ensure quality in every detail.",
     icon: (
       <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
         <path
@@ -29,7 +29,7 @@ const usps = [
   {
     title: "Complete Transparency",
     description:
-      "Clear pricing, honest timelines, and no surprises — from booking to possession.",
+      "Clear communication, transparent pricing and no surprises at any stage.",
     icon: (
       <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
         <path
@@ -44,7 +44,7 @@ const usps = [
   {
     title: "End-to-End Support",
     description:
-      "From site visits to after-sales service, our team stays with you well past move-in day.",
+      "From the first visit to after-sales, we're there for you at every step.",
     icon: (
       <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
         <path

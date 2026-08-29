@@ -31,15 +31,24 @@ export default function ContactHero() {
               show ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
             }`}
           >
-            Get In Touch
+            Contact Us
           </span>
           <h1
             className={`font-playfair text-4xl md:text-6xl lg:text-7xl text-white leading-tight transition-all duration-700 ease-out delay-150 motion-reduce:transition-none ${
               show ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
             }`}
           >
-            Let&apos;s Build Something <span className="italic">Timeless</span>
+            We&apos;re Just a <span className="italic">Conversation Away</span>
           </h1>
+          <p
+            className={`font-lato text-sm md:text-base text-white/80 max-w-lg mt-5 leading-relaxed transition-all duration-700 ease-out delay-300 motion-reduce:transition-none ${
+              show ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
+            }`}
+          >
+            Good conversations begin with a simple hello. Connect with our
+            team for project details, assistance and everything you need to
+            make an informed decision.
+          </p>
         </div>
       </section>
 

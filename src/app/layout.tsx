@@ -29,7 +29,7 @@ const playfair = Playfair_Display({
 export const metadata: Metadata = {
   title: "ShriRam Group | Real Estate Developers in Ghaziabad",
   description:
-    "ShriRam Group is a trusted real estate developer in Ghaziabad with 25+ years of experience delivering landmark residential and commercial projects.",
+    "ShriRam Group is a trusted real estate developer in Ghaziabad with 30+ years of experience delivering landmark residential and commercial projects.",
   keywords: [
     "ShriRam Group",
     "real estate Ghaziabad",
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "ShriRam Group | Real Estate Developers in Ghaziabad",
     description:
-      "25+ years of building landmark residential and commercial developments across Ghaziabad.",
+      "30+ years of building landmark residential and commercial developments across Ghaziabad.",
     url: "https://www.shriramgroup.com",
     siteName: "ShriRam Group",
     locale: "en_IN",

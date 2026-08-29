@@ -27,12 +27,12 @@ export default function ContactInfoBand() {
       ref={ref}
       className="relative w-full bg-[#1F1F1F] pt-24 pb-16 md:pt-28 md:pb-20 overflow-hidden"
     >
-      {/* Ghost numeral watermark - callback to the 25-year legacy motif */}
+      {/* Ghost numeral watermark - callback to the 30-year legacy motif */}
       <span
         aria-hidden="true"
         className="pointer-events-none select-none absolute -top-6 left-6 md:left-16 font-playfair text-[9rem] md:text-[13rem] text-white/[0.03] leading-none"
       >
-        25
+        30
       </span>
 
       {/* Animated gold seam - reveals top to bottom on scroll-in */}

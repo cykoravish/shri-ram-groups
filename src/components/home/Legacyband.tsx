@@ -38,7 +38,7 @@ export default function LegacyBand() {
             aria-hidden="true"
             className="absolute -top-10 -left-4 font-lato font-bold text-[8rem] md:text-[11rem] text-[#C4A065]/10 leading-none select-none"
           >
-            25
+            30
           </span>
 
           <div className="relative">
@@ -46,21 +46,21 @@ export default function LegacyBand() {
               Our Legacy
             </span>
             <h2 className="font-lato font-bold text-3xl md:text-5xl text-[#1F1F1F] mt-4 mb-6 leading-tight">
-              25 Years of
+              30 Years of
               <br />
               Building Excellence
             </h2>
             <p className="font-lato text-[#4F4F4F] text-base md:text-lg leading-relaxed max-w-md mb-4">
-              For a quarter century, we&apos;ve shaped Ghaziabad&apos;s skyline
-              with landmark residential and commercial developments — each
-              one built on a foundation of quality, transparency, and homes
-              delivered on time, every time.
+              Shriram Realty has been shaping spaces that bring together
+              quality, comfort and thoughtful living. Our journey has been
+              driven by a simple belief — a home should offer more than four
+              walls. It should offer a better way of life.
             </p>
             <p className="font-lato text-[#707070] text-sm md:text-base leading-relaxed max-w-md mb-8">
-              From our first residential society to the high-rise
-              communities we build today, our commitment has never changed:
-              creating spaces where families and businesses thrive for
-              generations.
+              In Ghaziabad and across our growing presence, we are committed
+              to creating thoughtfully planned communities with modern
+              amenities, quality construction and environments that make
+              everyday living more comfortable, connected and fulfilling.
             </p>
             <a
               href="/about"
@@ -92,10 +92,10 @@ export default function LegacyBand() {
           {/* Overlapping stat chip */}
           <div className="absolute -bottom-6 left-6 md:-bottom-8 md:left-8 bg-white shadow-lg px-6 py-4 md:px-8 md:py-5">
             <span className="font-lato font-bold text-3xl md:text-4xl text-[#1F1F1F]">
-              10<span className="text-[#C4A065]">+</span>
+              26<span className="text-[#C4A065]">+</span>
             </span>
             <span className="block font-lato text-xs uppercase tracking-[0.15em] text-[#707070] mt-1">
-              Landmark Projects Delivered
+              Projects Delivered
             </span>
           </div>
         </div>

@@ -6,8 +6,8 @@ const testimonials = [
   {
     quote:
       "The handover happened exactly on the date mentioned in our agreement. In a city where delays are the norm, that alone earned our trust.",
-    name: "Rohit Sharma",
-    detail: "Homeowner, The Meadows",
+    name: "Mr. Shekhar Sharma",
+    detail: "Owner, Shriram Northview",
   },
   {
     quote:
