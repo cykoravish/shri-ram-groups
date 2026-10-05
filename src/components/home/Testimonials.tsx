@@ -29,10 +29,10 @@ export default function Testimonials() {
   return (
     <section className="w-full bg-white py-16 md:py-24">
       <div className="max-w-4xl mx-auto px-6 text-center">
-        <span className="font-lato text-xs tracking-[0.3em] uppercase text-[#C4A065]">
+        <span className="font-lato text-xs tracking-[0.3em] uppercase text-brand">
           What Our Residents Say
         </span>
-        <h2 className="font-lato font-bold text-3xl md:text-5xl text-[#1F1F1F] mt-3 mb-12">
+        <h2 className="font-lato font-bold text-3xl md:text-5xl text-ink mt-3 mb-12">
           Voices From Our Communities
         </h2>
 
@@ -44,10 +44,10 @@ export default function Testimonials() {
                 i === active ? "opacity-100" : "opacity-0 pointer-events-none"
               }`}
             >
-              <p className="font-lato text-xl md:text-2xl text-[#1F1F1F] leading-relaxed mb-6">
+              <p className="font-lato text-xl md:text-2xl text-ink leading-relaxed mb-6">
                 &ldquo;{t.quote}&rdquo;
               </p>
-              <span className="font-lato font-bold text-sm text-[#1F1F1F]">
+              <span className="font-lato font-bold text-sm text-ink">
                 {t.name}
               </span>
               <span className="font-lato text-sm text-[#707070] block">
@@ -64,7 +64,7 @@ export default function Testimonials() {
               aria-label={`Show testimonial from ${t.name}`}
               onClick={() => setActive(i)}
               className={`h-[2px] transition-all duration-300 ${
-                i === active ? "w-8 bg-[#C4A065]" : "w-4 bg-[#DDDDDD]"
+                i === active ? "w-8 bg-brand" : "w-4 bg-[#DDDDDD]"
               }`}
             />
           ))}

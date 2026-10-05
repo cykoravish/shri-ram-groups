@@ -25,7 +25,7 @@ export default function LegacyBand() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="w-full bg-[#F1EEE9] py-16 md:py-24 overflow-hidden">
+    <section ref={sectionRef} className="w-full bg-tint py-16 md:py-24 overflow-hidden">
       <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center">
         {/* Text column */}
         <div
@@ -36,16 +36,16 @@ export default function LegacyBand() {
           {/* Faded large numeral - quiet background flourish */}
           <span
             aria-hidden="true"
-            className="absolute -top-10 -left-4 font-lato font-bold text-[8rem] md:text-[11rem] text-[#C4A065]/10 leading-none select-none"
+            className="absolute -top-10 -left-4 font-lato font-bold text-[8rem] md:text-[11rem] text-brand/10 leading-none select-none"
           >
             30
           </span>
 
           <div className="relative">
-            <span className="font-lato text-xs tracking-[0.3em] uppercase text-[#C4A065]">
+            <span className="font-lato text-xs tracking-[0.3em] uppercase text-brand">
               Our Legacy
             </span>
-            <h2 className="font-lato font-bold text-3xl md:text-5xl text-[#1F1F1F] mt-4 mb-6 leading-tight">
+            <h2 className="font-lato font-bold text-3xl md:text-5xl text-ink mt-4 mb-6 leading-tight">
               30 Years of
               <br />
               Building Excellence
@@ -64,7 +64,7 @@ export default function LegacyBand() {
             </p>
             <a
               href="/about"
-              className="inline-flex items-center gap-2 font-lato text-sm uppercase tracking-wide text-[#1F1F1F] border-b border-[#C4A065] pb-1 hover:text-[#C4A065] hover:gap-3 transition-all"
+              className="inline-flex items-center gap-2 font-lato text-sm uppercase tracking-wide text-ink border-b border-brand pb-1 hover:text-brand hover:gap-3 transition-all"
             >
               Read Our Story
               <span aria-hidden="true">→</span>
@@ -79,7 +79,7 @@ export default function LegacyBand() {
           }`}
         >
           {/* Offset gold frame - premium real-estate motif */}
-          <div className="absolute -top-4 -right-4 md:-top-6 md:-right-6 w-full h-full border-2 border-[#C4A065]" />
+          <div className="absolute -top-4 -right-4 md:-top-6 md:-right-6 w-full h-full border-2 border-brand" />
 
           <div className="relative aspect-[4/5] md:aspect-[4/5] w-full overflow-hidden">
             <img
@@ -91,8 +91,8 @@ export default function LegacyBand() {
 
           {/* Overlapping stat chip */}
           <div className="absolute -bottom-6 left-6 md:-bottom-8 md:left-8 bg-white shadow-lg px-6 py-4 md:px-8 md:py-5">
-            <span className="font-lato font-bold text-3xl md:text-4xl text-[#1F1F1F]">
-              26<span className="text-[#C4A065]">+</span>
+            <span className="font-lato font-bold text-3xl md:text-4xl text-ink">
+              26<span className="text-brand">+</span>
             </span>
             <span className="block font-lato text-xs uppercase tracking-[0.15em] text-[#707070] mt-1">
               Projects Delivered

@@ -89,7 +89,7 @@ export default function PrivacyPolicyPage() {
         <div className="max-w-4xl mx-auto px-6">
           <p className="font-lato text-sm text-[#707070]">
             Last Updated:{" "}
-            <span className="font-medium text-[#1F1F1F]">15 July 2026</span>
+            <span className="font-medium text-ink">15 July 2026</span>
           </p>
         </div>
       </div>
@@ -98,7 +98,7 @@ export default function PrivacyPolicyPage() {
         <div className="max-w-4xl mx-auto px-6">
           {sections.map((s) => (
             <div key={s.heading} className="mb-10 last:mb-0">
-              <h2 className="font-playfair text-xl md:text-2xl text-[#1F1F1F] mb-4">
+              <h2 className="font-playfair text-xl md:text-2xl text-ink mb-4">
                 {s.heading}
               </h2>
               {s.body.map((p, i) => (

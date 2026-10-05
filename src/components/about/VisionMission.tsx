@@ -6,9 +6,9 @@ import { Eye, Target, type LucideIcon } from "lucide-react";
 function IconBlock({ Icon, reverseClip }: { Icon: LucideIcon; reverseClip?: boolean }) {
   return (
     <div className="relative aspect-[4/3] w-full overflow-hidden">
-      <div className="absolute inset-0 bg-[#EFEEEC]" />
+      <div className="absolute inset-0 bg-tint" />
       <div
-        className="absolute inset-0 bg-[#C4A065]"
+        className="absolute inset-0 bg-brand"
         style={{
           clipPath: reverseClip
             ? "polygon(100% 0, 45% 0, 65% 100%, 100% 100%)"
@@ -16,7 +16,7 @@ function IconBlock({ Icon, reverseClip }: { Icon: LucideIcon; reverseClip?: bool
         }}
       />
       <div className="relative z-10 h-full flex items-center justify-center">
-        <Icon size={56} className="text-[#1F1F1F]" strokeWidth={1.25} />
+        <Icon size={56} className="text-ink" strokeWidth={1.25} />
       </div>
     </div>
   );
@@ -68,8 +68,8 @@ function Row({
           visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
         }`}
       >
-        <span className="font-lato text-xs tracking-[0.3em] uppercase text-[#C4A065]">{label}</span>
-        <h2 className="font-playfair text-3xl md:text-4xl text-[#1F1F1F] mt-4 mb-5">{heading}</h2>
+        <span className="font-lato text-xs tracking-[0.3em] uppercase text-brand">{label}</span>
+        <h2 className="font-playfair text-3xl md:text-4xl text-ink mt-4 mb-5">{heading}</h2>
         <p className="font-lato text-sm md:text-base text-[#707070] leading-relaxed max-w-md">{copy}</p>
       </div>
     </div>

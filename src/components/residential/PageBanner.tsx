@@ -34,7 +34,7 @@ export default function PageBanner({
      <div className="absolute inset-0 z-10 flex flex-col items-center justify-center text-center px-6">
         {subtitle && (
           <span
-            className={`font-lato text-xs md:text-sm tracking-[0.4em] uppercase text-[#C4A065] mb-4 transition-all duration-700 ease-out motion-reduce:transition-none ${
+            className={`font-lato text-xs md:text-sm tracking-[0.4em] uppercase text-brand-light mb-4 transition-all duration-700 ease-out motion-reduce:transition-none ${
               show ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
             }`}
           >

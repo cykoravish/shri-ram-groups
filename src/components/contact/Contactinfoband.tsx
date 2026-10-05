@@ -25,7 +25,7 @@ export default function ContactInfoBand() {
   return (
     <section
       ref={ref}
-      className="relative w-full bg-[#1F1F1F] pt-24 pb-16 md:pt-28 md:pb-20 overflow-hidden"
+      className="relative w-full bg-ink pt-24 pb-16 md:pt-28 md:pb-20 overflow-hidden"
     >
       {/* Ghost numeral watermark - callback to the 30-year legacy motif */}
       <span
@@ -37,7 +37,7 @@ export default function ContactInfoBand() {
 
       {/* Animated gold seam - reveals top to bottom on scroll-in */}
       <div
-        className="absolute top-0 left-0 w-[3px] bg-[#C4A065] transition-[height] duration-[1100ms] ease-out motion-reduce:transition-none"
+        className="absolute top-0 left-0 w-[3px] bg-brand-light transition-[height] duration-[1100ms] ease-out motion-reduce:transition-none"
         style={{ height: visible ? "100%" : "0%" }}
       />
 
@@ -47,7 +47,7 @@ export default function ContactInfoBand() {
             visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
           }`}
         >
-          <span className="font-lato text-xs tracking-[0.3em] uppercase text-[#C4A065]">
+          <span className="font-lato text-xs tracking-[0.3em] uppercase text-brand-light">
             Corporate Office
           </span>
           <p className="font-playfair text-xl md:text-2xl text-white mt-4 leading-relaxed">
@@ -61,15 +61,15 @@ export default function ContactInfoBand() {
             visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
           }`}
         >
-          <span className="font-lato text-xs tracking-[0.3em] uppercase text-[#C4A065]">
+          <span className="font-lato text-xs tracking-[0.3em] uppercase text-brand-light">
             Sales Enquiries
           </span>
           <p className="font-playfair text-xl md:text-2xl text-white mt-4 leading-relaxed">
-            <a href="tel:+911234567890" className="hover:text-[#C4A065] transition-colors">
+            <a href="tel:+911234567890" className="hover:text-brand-light transition-colors">
               +91 12345 67890
             </a>
             <br />
-            <a href="mailto:info@shriramgroup.com" className="hover:text-[#C4A065] transition-colors">
+            <a href="mailto:info@shriramgroup.com" className="hover:text-brand-light transition-colors">
               info@shriramgroup.com
             </a>
           </p>

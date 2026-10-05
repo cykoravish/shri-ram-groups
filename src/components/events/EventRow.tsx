@@ -63,7 +63,7 @@ export default function EventRow({
         </div>
 
         <div className="md:order-2 text-center md:text-left">
-          <h3 className="font-playfair text-2xl md:text-3xl text-[#C4A065]">{title}</h3>
+          <h3 className="font-playfair text-2xl md:text-3xl text-brand">{title}</h3>
           <p className="font-lato text-xs uppercase tracking-[0.15em] text-[#707070] mt-2 mb-4">
             {displayDate}
           </p>

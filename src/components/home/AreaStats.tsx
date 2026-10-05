@@ -47,15 +47,15 @@ function BigBlockStat({
   return (
     <div className="group relative h-56 md:h-64 overflow-hidden transition-transform duration-300 ease-out hover:scale-[1.015]">
       {/* Base layer */}
-      <div className="absolute inset-0 bg-[#EFEEEC]" />
+      <div className="absolute inset-0 bg-tint" />
       {/* Diagonal gold cut */}
       <div
-        className="absolute inset-0 bg-[#C4A065] transition-[filter] duration-300 group-hover:brightness-[1.06]"
+        className="absolute inset-0 bg-brand transition-[filter] duration-300 group-hover:brightness-[1.06]"
         style={{ clipPath: goldClip }}
       />
 
       <div className="relative z-10 h-full flex items-center justify-center">
-        <span className="font-lato font-bold text-5xl md:text-6xl lg:text-7xl text-[#1F1F1F] leading-none">
+        <span className="font-lato font-bold text-5xl md:text-6xl lg:text-7xl text-white leading-none">
           {count.toLocaleString("en-IN")}
           <span className="text-3xl md:text-4xl align-top ml-1">{suffix}</span>
         </span>
@@ -85,9 +85,9 @@ function SimpleStat({
 
   return (
     <div className="flex items-center gap-4 md:gap-6 py-8 md:py-0">
-      <span className="font-lato font-bold text-5xl md:text-6xl text-[#1F1F1F] leading-none whitespace-nowrap">
+      <span className="font-lato font-bold text-5xl md:text-6xl text-ink leading-none whitespace-nowrap">
         {count}
-        <span className="text-[#C4A065]">{suffix}</span>
+        <span className="text-brand">{suffix}</span>
       </span>
       <span className="w-px h-10 bg-[#DDDDDD] hidden sm:block rotate-12" />
       <span className="font-lato text-sm md:text-base text-[#707070] max-w-[10rem] leading-snug">
@@ -114,7 +114,7 @@ function LegacyBanner({ start }: { start: boolean }) {
       <div className="absolute inset-0 bg-white/30" />
 
       {/* Ghost watermark number for depth */}
-      <span className="pointer-events-none select-none absolute -left-4 md:left-10 top-1/2 -translate-y-1/2 font-lato font-bold text-[14rem] md:text-[22rem] leading-none text-[#1F1F1F]/[0.04]">
+      <span className="pointer-events-none select-none absolute -left-4 md:left-10 top-1/2 -translate-y-1/2 font-lato font-bold text-[14rem] md:text-[22rem] leading-none text-ink/[0.04]">
         30
       </span>
 
@@ -122,15 +122,15 @@ function LegacyBanner({ start }: { start: boolean }) {
         {/* Left: big diagonal number block */}
         <div className="relative shrink-0">
           <div
-            className="absolute -inset-4 md:-inset-6 bg-[#C4A065]"
+            className="absolute -inset-4 md:-inset-6 bg-brand"
             style={{ clipPath: "polygon(0 0, 100% 0, 85% 100%, 0% 100%)" }}
           />
           <div className="relative z-10 px-6 py-4 md:px-10 md:py-6">
-            <span className="font-lato font-bold text-7xl md:text-8xl lg:text-9xl text-[#1F1F1F] leading-none">
+            <span className="font-lato font-bold text-7xl md:text-8xl lg:text-9xl text-ink leading-none">
               {years}
               <span className="text-3xl md:text-4xl align-top ml-1">+</span>
             </span>
-            <span className="block font-lato text-xs md:text-sm tracking-[0.4em] uppercase text-[#1F1F1F] mt-1">
+            <span className="block font-lato text-xs md:text-sm tracking-[0.4em] uppercase text-ink mt-1">
               Years
             </span>
           </div>
@@ -138,13 +138,13 @@ function LegacyBanner({ start }: { start: boolean }) {
 
         {/* Right: heading + copy */}
         <div className="text-center md:text-left">
-          <span className="inline-block font-lato text-xs tracking-[0.3em] uppercase text-[#C4A065] border-b border-[#C4A065] pb-2 mb-4">
+          <span className="inline-block font-lato text-xs tracking-[0.3em] uppercase text-brand border-b border-brand pb-2 mb-4">
             Legacy
           </span>
-          <h3 className="font-lato text-3xl md:text-4xl lg:text-5xl text-[#1F1F1F] leading-tight">
+          <h3 className="font-lato text-3xl md:text-4xl lg:text-5xl text-ink leading-tight">
             Experience <span className="font-bold">Excellence</span>
           </h3>
-          <span className="block w-16 h-[3px] bg-[#C4A065] my-4 mx-auto md:mx-0" />
+          <span className="block w-16 h-[3px] bg-brand my-4 mx-auto md:mx-0" />
           <p className="font-lato text-sm md:text-base text-[#707070] max-w-xl leading-relaxed">
             At Shriram Realty, we believe a better life begins with a better
             place to live, grow and thrive. For over 30 years, we have been
@@ -195,7 +195,7 @@ export default function AreaStats() {
       <div className="max-w-6xl mx-auto px-6 pt-14 md:pt-20">
         {/* Eyebrow / context line */}
         <div className="text-center mb-10 md:mb-12">
-          <span className="inline-block font-lato text-xs tracking-[0.3em] uppercase text-[#C4A065] border-b border-[#C4A065] pb-2 mb-3">
+          <span className="inline-block font-lato text-xs tracking-[0.3em] uppercase text-brand border-b border-brand pb-2 mb-3">
             Our Scale
           </span>
           <p className="font-lato text-[#707070] text-sm md:text-base mt-3 max-w-md mx-auto">

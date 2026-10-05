@@ -6,16 +6,16 @@ export default function NotFound() {
       {/* Large quiet watermark numeral - consistent with the "30" motif used elsewhere */}
       <span
         aria-hidden="true"
-        className="absolute font-lato font-bold text-[14rem] md:text-[22rem] text-[#C4A065]/10 leading-none select-none"
+        className="absolute font-lato font-bold text-[14rem] md:text-[22rem] text-brand/10 leading-none select-none"
       >
         404
       </span>
 
       <div className="relative z-10 text-center max-w-lg">
-        <span className="font-lato text-xs tracking-[0.3em] uppercase text-[#C4A065]">
+        <span className="font-lato text-xs tracking-[0.3em] uppercase text-brand">
           Page Not Found
         </span>
-        <h1 className="font-lato font-bold text-3xl md:text-5xl text-[#1F1F1F] mt-4 mb-5 leading-tight">
+        <h1 className="font-lato font-bold text-3xl md:text-5xl text-ink mt-4 mb-5 leading-tight">
           This Address Doesn&apos;t Exist
         </h1>
         <p className="font-lato text-[#707070] text-base md:text-lg leading-relaxed mb-10">
@@ -26,13 +26,13 @@ export default function NotFound() {
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <Link
             href="/"
-            className="font-lato text-sm uppercase tracking-wide bg-[#C4A065] hover:bg-[#BCA168] text-white px-8 py-3 transition-colors"
+            className="font-lato text-sm uppercase tracking-wide bg-brand hover:bg-brand text-white px-8 py-3 transition-colors"
           >
             Back To Home
           </Link>
           <Link
             href="/residential"
-            className="font-lato text-sm uppercase tracking-wide text-[#1F1F1F] border-b border-[#C4A065] pb-1 hover:text-[#C4A065] transition-colors"
+            className="font-lato text-sm uppercase tracking-wide text-ink border-b border-brand pb-1 hover:text-brand transition-colors"
           >
             Explore Projects →
           </Link>

@@ -47,11 +47,11 @@ export default function LeadershipLegacy() {
   }, []);
 
   return (
-    <section ref={ref} className="w-full bg-[#F1EEE9] py-16 md:py-24">
+    <section ref={ref} className="w-full bg-tint py-16 md:py-24">
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-12 md:mb-16">
-          <h2 className="font-playfair text-3xl md:text-4xl text-[#1F1F1F]">Leadership Legacy</h2>
-          <span className="block w-16 h-[3px] bg-[#C4A065] mx-auto mt-4" />
+          <h2 className="font-playfair text-3xl md:text-4xl text-ink">Leadership Legacy</h2>
+          <span className="block w-16 h-[3px] bg-brand mx-auto mt-4" />
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
@@ -69,10 +69,10 @@ export default function LeadershipLegacy() {
                   alt={l.name}
                   className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 ease-out"
                 />
-                <span className="absolute bottom-0 left-0 w-12 h-1.5 bg-[#C4A065]" />
+                <span className="absolute bottom-0 left-0 w-12 h-1.5 bg-brand" />
               </div>
-              <h3 className="font-playfair text-xl text-[#1F1F1F]">{l.name}</h3>
-              <p className="font-lato text-xs uppercase tracking-[0.15em] text-[#C4A065] mt-1 mb-3">
+              <h3 className="font-playfair text-xl text-ink">{l.name}</h3>
+              <p className="font-lato text-xs uppercase tracking-[0.15em] text-brand mt-1 mb-3">
                 {l.title}
               </p>
               <p className="font-lato text-sm text-[#707070] leading-relaxed">{l.bio}</p>

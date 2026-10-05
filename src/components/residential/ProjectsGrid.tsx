@@ -15,10 +15,10 @@ export default function ProjectsGrid() {
     <section className="w-full bg-white py-16 md:py-24">
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-10 md:mb-14">
-          <span className="font-lato text-xs tracking-[0.3em] uppercase text-[#C4A065]">
+          <span className="font-lato text-xs tracking-[0.3em] uppercase text-brand">
             Our Portfolio
           </span>
-          <h2 className="font-playfair text-3xl md:text-4xl text-[#1F1F1F] mt-4">Explore By Status</h2>
+          <h2 className="font-playfair text-3xl md:text-4xl text-ink mt-4">Explore By Status</h2>
         </div>
 
         <div className="flex flex-wrap justify-center gap-3 mb-12">
@@ -29,8 +29,8 @@ export default function ProjectsGrid() {
               aria-pressed={active === f}
               className={`font-lato text-xs uppercase tracking-[0.15em] px-5 py-2.5 border transition-colors ${
                 active === f
-                  ? "bg-[#C4A065] border-[#C4A065] text-[#1F1F1F]"
-                  : "border-[#DDDDDD] text-[#707070] hover:border-[#C4A065] hover:text-[#1F1F1F]"
+                  ? "bg-brand border-brand text-white"
+                  : "border-[#DDDDDD] text-[#707070] hover:border-brand hover:text-ink"
               }`}
             >
               {f}
@@ -57,7 +57,7 @@ export default function ProjectsGrid() {
                   </span>
                 </span>
               </div>
-              <h3 className="font-playfair text-xl text-[#1F1F1F] group-hover:text-[#C4A065] transition-colors">
+              <h3 className="font-playfair text-xl text-ink group-hover:text-brand transition-colors">
                 {p.name}
               </h3>
               <p className="font-lato text-sm text-[#707070] mt-1">{p.location}</p>

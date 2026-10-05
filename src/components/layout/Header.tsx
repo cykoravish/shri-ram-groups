@@ -18,7 +18,7 @@ export default function Header() {
   }, []);
 
   const linkColor = solid ? "text-[#4F4F4F]" : "text-white";
-  const barColor = menuOpen || solid ? "bg-[#1F1F1F]" : "bg-white";
+  const barColor = menuOpen || solid ? "bg-ink" : "bg-white";
 
   return (
     <>
@@ -45,7 +45,7 @@ export default function Header() {
                 solid ? "text-[#4F4F4F]" : "text-white"
               }`}
             >
-              ShriRam<span className="text-[#C4A065]">Group</span>
+              ShriRam<span className={solid ? "text-brand" : "text-brand-light"}>Group</span>
             </span>
             <span
               className={`font-lato text-[9px] sm:text-[10px] tracking-[0.2em] uppercase transition-colors duration-300 motion-reduce:transition-none ${
@@ -61,7 +61,7 @@ export default function Header() {
           <div className="hidden md:flex items-center gap-8">
             <div className="group relative">
               <button
-                className={`flex items-center gap-1.5 font-lato font-bold text-sm tracking-wide uppercase transition-colors duration-300 hover:text-[#C4A065] motion-reduce:transition-none ${linkColor}`}
+                className={`flex items-center gap-1.5 font-lato font-bold text-sm tracking-wide uppercase transition-colors duration-300 hover:text-brand motion-reduce:transition-none ${linkColor}`}
               >
                 Our Projects
                 <ChevronDown
@@ -80,7 +80,7 @@ export default function Header() {
                     <Link
                       key={item.href}
                       href={item.href}
-                      className="block px-6 py-3 font-lato text-sm text-[#4F4F4F] hover:bg-white hover:text-[#C4A065] transition-colors first:rounded-t-xl last:rounded-b-xl"
+                      className="block px-6 py-3 font-lato text-sm text-[#4F4F4F] hover:bg-white hover:text-brand transition-colors first:rounded-t-xl last:rounded-b-xl"
                     >
                       {item.label}
                     </Link>
@@ -91,7 +91,7 @@ export default function Header() {
 
             <Link
               href="/contact-us"
-              className={`flex items-center gap-2 font-lato font-bold text-sm tracking-wide uppercase transition-colors duration-300 hover:text-[#C4A065] motion-reduce:transition-none ${linkColor}`}
+              className={`flex items-center gap-2 font-lato font-bold text-sm tracking-wide uppercase transition-colors duration-300 hover:text-brand motion-reduce:transition-none ${linkColor}`}
             >
               <Phone size={16} />
               Contact Us

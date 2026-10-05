@@ -30,12 +30,12 @@ export default function ProofStrip() {
           visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
         }`}
       >
-        <span className="font-playfair text-2xl text-[#1F1F1F]">
-          30<span className="text-[#C4A065]">+</span> Years of Building Excellence
+        <span className="font-playfair text-2xl text-ink">
+          30<span className="text-brand">+</span> Years of Building Excellence
         </span>
         <div className="flex items-center gap-3 border border-[#DDDDDD] px-6 py-3">
-          <span className="font-lato font-bold text-sm text-[#1F1F1F]">Google Rating</span>
-          <span className="flex items-center gap-1 text-[#C4A065]">
+          <span className="font-lato font-bold text-sm text-ink">Google Rating</span>
+          <span className="flex items-center gap-1 text-brand">
             {Array.from({ length: 5 }).map((_, i) => (
               <Star key={i} size={14} fill="currentColor" strokeWidth={0} />
             ))}

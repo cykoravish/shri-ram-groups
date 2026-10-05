@@ -3,10 +3,10 @@ export default function LocationMap() {
     <section className="py-20 bg-white">
       <div className="max-w-6xl mx-auto px-6">
         <div className="mb-10 text-center">
-          <p className="font-lato text-xs uppercase tracking-[0.3em] text-[#C4A065]">
+          <p className="font-lato text-xs uppercase tracking-[0.3em] text-brand">
             Visit Us
           </p>
-          <h2 className="font-playfair text-4xl text-[#1F1F1F] mt-3">
+          <h2 className="font-playfair text-4xl text-ink mt-3">
             Find Us on the Map
           </h2>
         </div>

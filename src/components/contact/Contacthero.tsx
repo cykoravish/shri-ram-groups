@@ -27,7 +27,7 @@ export default function ContactHero() {
 
         <div className="relative z-10 h-full flex flex-col items-center justify-end pb-24 md:pb-28 px-6 text-center">
           <span
-            className={`font-lato text-xs md:text-sm tracking-[0.4em] uppercase text-[#C4A065] mb-4 transition-all duration-700 ease-out motion-reduce:transition-none ${
+            className={`font-lato text-xs md:text-sm tracking-[0.4em] uppercase text-brand-light mb-4 transition-all duration-700 ease-out motion-reduce:transition-none ${
               show ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
             }`}
           >
@@ -63,14 +63,14 @@ export default function ContactHero() {
             href="tel:+911234567890"
             className="group flex items-center justify-center gap-3 px-6 py-6 hover:bg-[#F7F7F7] transition-colors"
           >
-            <span className="flex items-center justify-center w-10 h-10 rounded-full bg-[#F1EEE9] text-[#C4A065] group-hover:bg-[#C4A065] group-hover:text-white transition-colors">
+            <span className="flex items-center justify-center w-10 h-10 rounded-full bg-tint text-brand group-hover:bg-brand group-hover:text-white transition-colors">
               <Phone size={16} />
             </span>
             <span className="text-left">
               <span className="block font-lato text-[10px] uppercase tracking-[0.2em] text-[#707070]">
                 Call Us
               </span>
-              <span className="block font-lato font-bold text-sm text-[#1F1F1F]">
+              <span className="block font-lato font-bold text-sm text-ink">
                 +91 12345 67890
               </span>
             </span>
@@ -79,14 +79,14 @@ export default function ContactHero() {
             href="mailto:info@shriramgroup.com"
             className="group flex items-center justify-center gap-3 px-6 py-6 hover:bg-[#F7F7F7] transition-colors"
           >
-            <span className="flex items-center justify-center w-10 h-10 rounded-full bg-[#F1EEE9] text-[#C4A065] group-hover:bg-[#C4A065] group-hover:text-white transition-colors">
+            <span className="flex items-center justify-center w-10 h-10 rounded-full bg-tint text-brand group-hover:bg-brand group-hover:text-white transition-colors">
               <Mail size={16} />
             </span>
             <span className="text-left">
               <span className="block font-lato text-[10px] uppercase tracking-[0.2em] text-[#707070]">
                 Email Us
               </span>
-              <span className="block font-lato font-bold text-sm text-[#1F1F1F]">
+              <span className="block font-lato font-bold text-sm text-ink">
                 info@shriramgroup.com
               </span>
             </span>

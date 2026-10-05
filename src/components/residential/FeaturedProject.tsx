@@ -54,7 +54,7 @@ export default function FeaturedProject({
 
         {/* Status ribbon - diagonal cut, callback to the site's signature clip motif */}
         <span
-          className="absolute top-0 left-0 z-10 bg-[#C4A065] text-[#1F1F1F] font-lato text-xs font-bold uppercase tracking-[0.15em] px-7 py-3"
+          className="absolute top-0 left-0 z-10 bg-brand text-white font-lato text-xs font-bold uppercase tracking-[0.15em] px-7 py-3"
           style={{ clipPath: "polygon(0 0, 100% 0, 85% 100%, 0 100%)" }}
         >
           {status}
@@ -72,10 +72,10 @@ export default function FeaturedProject({
         }`}
       >
         <div className="flex items-center gap-3 mb-4">
-          <span className="w-2 h-2 rounded-full bg-[#C4A065]" />
-          <h3 className="font-playfair text-3xl md:text-4xl text-[#1F1F1F]">{name}</h3>
+          <span className="w-2 h-2 rounded-full bg-brand" />
+          <h3 className="font-playfair text-3xl md:text-4xl text-ink">{name}</h3>
         </div>
-        <span className="block w-16 h-[3px] bg-[#C4A065] mb-5" />
+        <span className="block w-16 h-[3px] bg-brand mb-5" />
         <p className="font-lato text-sm md:text-base text-[#707070] leading-relaxed max-w-2xl mb-6">
           {description}
         </p>
@@ -92,7 +92,7 @@ export default function FeaturedProject({
           </div>
           <a
             href={href}
-            className="group inline-flex items-center gap-2 border border-[#1F1F1F] px-6 py-3 font-lato text-xs uppercase tracking-[0.2em] text-[#1F1F1F] hover:bg-[#1F1F1F] hover:text-white transition-colors w-fit"
+            className="group inline-flex items-center gap-2 border border-ink px-6 py-3 font-lato text-xs uppercase tracking-[0.2em] text-ink hover:bg-ink hover:text-white transition-colors w-fit"
           >
             Know More
             <ArrowRight size={14} className="transition-transform duration-300 group-hover:translate-x-1" />

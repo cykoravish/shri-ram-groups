@@ -39,10 +39,10 @@ export default function AwardsSection() {
               visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
             }`}
           >
-            <span className="font-lato text-xs tracking-[0.3em] uppercase text-[#C4A065]">
+            <span className="font-lato text-xs tracking-[0.3em] uppercase text-brand">
               Recognized Excellence
             </span>
-            <h2 className="font-playfair text-3xl md:text-4xl text-[#1F1F1F] mt-4 mb-6 leading-tight">
+            <h2 className="font-playfair text-3xl md:text-4xl text-ink mt-4 mb-6 leading-tight">
               Awards &amp; Recognition
             </h2>
             <p className="font-lato text-sm md:text-base text-[#707070] leading-relaxed max-w-md">
@@ -56,13 +56,13 @@ export default function AwardsSection() {
               visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
             }`}
           >
-            <div className="absolute inset-0 bg-[#EFEEEC]" />
+            <div className="absolute inset-0 bg-tint" />
             <div
-              className="absolute inset-0 bg-[#C4A065]"
+              className="absolute inset-0 bg-brand"
               style={{ clipPath: "polygon(100% 0, 40% 0, 60% 100%, 100% 100%)" }}
             />
             <div className="relative z-10 h-full flex items-center justify-center">
-              <Trophy size={56} className="text-[#1F1F1F]" strokeWidth={1.25} />
+              <Trophy size={56} className="text-ink" strokeWidth={1.25} />
             </div>
           </div>
         </div>
@@ -76,14 +76,14 @@ export default function AwardsSection() {
               }`}
               style={{ transitionDelay: visible ? `${i * 100}ms` : "0ms" }}
             >
-              <div className="bg-[#1F1F1F] aspect-[4/3] flex flex-col items-center justify-center gap-3 px-4">
-                <a.icon size={28} className="text-[#C4A065]" strokeWidth={1.5} />
+              <div className="bg-ink aspect-[4/3] flex flex-col items-center justify-center gap-3 px-4">
+                <a.icon size={28} className="text-brand-light" strokeWidth={1.5} />
                 <span className="font-lato text-[10px] uppercase tracking-[0.15em] text-white/70">
                   {a.year}
                 </span>
               </div>
-              <div className="bg-white px-4 py-4 border-t-2 border-[#C4A065]">
-                <p className="font-lato text-sm font-bold text-[#1F1F1F] leading-snug">{a.label}</p>
+              <div className="bg-white px-4 py-4 border-t-2 border-brand">
+                <p className="font-lato text-sm font-bold text-ink leading-snug">{a.label}</p>
                 <p className="font-lato text-xs text-[#707070] mt-1">{a.title}</p>
               </div>
             </div>

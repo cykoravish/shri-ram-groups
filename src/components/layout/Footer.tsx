@@ -20,7 +20,7 @@ const socials = [
 
 export default function Footer() {
   return (
-    <footer className="w-full bg-[#F1EEE9] pt-16 pb-8">
+    <footer className="w-full bg-tint pt-16 pb-8">
       <div className="max-w-6xl mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-[1.3fr_1fr_1fr] gap-10 md:gap-8 pb-12 border-b border-[#DDDDDD]">
           {/* Brand + address */}
@@ -43,7 +43,7 @@ export default function Footer() {
 
           {/* Quick links */}
           <div>
-            <h4 className="font-lato text-xs uppercase tracking-[0.2em] text-[#1F1F1F] mb-4">
+            <h4 className="font-lato text-xs uppercase tracking-[0.2em] text-ink mb-4">
               Quick Links
             </h4>
             <ul className="space-y-2">
@@ -51,7 +51,7 @@ export default function Footer() {
                 <li key={link.href}>
                   <a
                     href={link.href}
-                    className="font-lato text-sm text-[#707070] hover:text-[#C4A065] transition-colors"
+                    className="font-lato text-sm text-[#707070] hover:text-brand transition-colors"
                   >
                     {link.label}
                   </a>
@@ -62,7 +62,7 @@ export default function Footer() {
 
           {/* Social */}
           <div>
-            <h4 className="font-lato text-xs uppercase tracking-[0.2em] text-[#1F1F1F] mb-4">
+            <h4 className="font-lato text-xs uppercase tracking-[0.2em] text-ink mb-4">
               Follow Us
             </h4>
             <ul className="space-y-2">
@@ -70,7 +70,7 @@ export default function Footer() {
                 <li key={s.label}>
                   <Link
                     href={s.href}
-                    className="flex items-center gap-2 font-lato text-sm text-[#707070] hover:text-[#C4A065] transition-colors"
+                    className="flex items-center gap-2 font-lato text-sm text-[#707070] hover:text-brand transition-colors"
                   >
                     <s.icon size={16} />
                     {s.label}
@@ -88,7 +88,7 @@ export default function Footer() {
             </span>
             <Link
               href="/privacy-policy"
-              className="font-lato text-sm text-[#707070] hover:text-[#C4A065] transition-colors underline underline-offset-2"
+              className="font-lato text-sm text-[#707070] hover:text-brand transition-colors underline underline-offset-2"
             >
               Privacy Policy
             </Link>
