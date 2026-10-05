@@ -43,6 +43,10 @@ function BigBlockStat({
   const goldClip = reverse
     ? "polygon(100% 0, 42% 0, 58% 100%, 100% 100%)"
     : "polygon(0 0, 58% 0, 42% 100%, 0 100%)";
+  // Complement of the navy cut, so the number can switch colour along the diagonal
+  const lightClip = reverse
+    ? "polygon(0 0, 42% 0, 58% 100%, 0 100%)"
+    : "polygon(58% 0, 100% 0, 100% 100%, 42% 100%)";
 
   return (
     <div className="group relative h-56 md:h-64 overflow-hidden transition-transform duration-300 ease-out hover:scale-[1.015]">
@@ -54,12 +58,23 @@ function BigBlockStat({
         style={{ clipPath: goldClip }}
       />
 
-      <div className="relative z-10 h-full flex items-center justify-center">
-        <span className="font-lato font-bold text-5xl md:text-6xl lg:text-7xl text-white leading-none">
-          {count.toLocaleString("en-IN")}
-          <span className="text-3xl md:text-4xl align-top ml-1">{suffix}</span>
-        </span>
-      </div>
+      {/* Number: white over the navy cut, dark navy over the light area */}
+      {[
+        { clip: goldClip, color: "text-white", hidden: false },
+        { clip: lightClip, color: "text-ink", hidden: true },
+      ].map((l) => (
+        <div
+          key={l.color}
+          aria-hidden={l.hidden || undefined}
+          className="absolute inset-0 z-10 flex items-center justify-center"
+          style={{ clipPath: l.clip }}
+        >
+          <span className={`font-lato font-bold text-5xl md:text-6xl lg:text-7xl ${l.color} leading-none`}>
+            {count.toLocaleString("en-IN")}
+            <span className="text-3xl md:text-4xl align-top ml-1">{suffix}</span>
+          </span>
+        </div>
+      ))}
 
       <div className="absolute bottom-0 left-0 w-full bg-[#4F4F4F]/90 py-3">
         <span className="block text-center font-lato text-xs md:text-sm uppercase tracking-[0.2em] text-white">
@@ -126,11 +141,11 @@ function LegacyBanner({ start }: { start: boolean }) {
             style={{ clipPath: "polygon(0 0, 100% 0, 85% 100%, 0% 100%)" }}
           />
           <div className="relative z-10 px-6 py-4 md:px-10 md:py-6">
-            <span className="font-lato font-bold text-7xl md:text-8xl lg:text-9xl text-ink leading-none">
+            <span className="font-lato font-bold text-7xl md:text-8xl lg:text-9xl text-white leading-none">
               {years}
               <span className="text-3xl md:text-4xl align-top ml-1">+</span>
             </span>
-            <span className="block font-lato text-xs md:text-sm tracking-[0.4em] uppercase text-ink mt-1">
+            <span className="block font-lato text-xs md:text-sm tracking-[0.4em] uppercase text-brand-light mt-1">
               Years
             </span>
           </div>
