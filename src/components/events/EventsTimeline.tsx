@@ -93,8 +93,8 @@ const events = [
 
 export default function EventsTimeline() {
   return (
-    <section className="w-full bg-[#F8F5F1]">
-      <div className="divide-y divide-[#E5DFD6]">
+    <section className="w-full bg-tint-light">
+      <div className="divide-y divide-tint-dark">
         {events.map((e, i) => (
           <EventRow key={e.title} {...e} reverse={i % 2 === 1} />
         ))}

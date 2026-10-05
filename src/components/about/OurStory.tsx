@@ -33,23 +33,23 @@ export default function OurStory() {
           }`}
         >
           <div className="relative aspect-square w-full max-w-sm overflow-hidden">
-            <div className="absolute inset-0 bg-[#EFEEEC]" />
+            <div className="absolute inset-0 bg-tint" />
             <div
-              className="absolute inset-0 bg-[#C4A065]"
+              className="absolute inset-0 bg-brand"
               style={{ clipPath: "polygon(0 0, 65% 0, 35% 100%, 0 100%)" }}
             />
             <div className="relative z-10 h-full flex items-center justify-center">
-              <Compass size={64} className="text-[#1F1F1F]" strokeWidth={1.25} />
+              <Compass size={64} className="text-ink" strokeWidth={1.25} />
             </div>
           </div>
 
-          <p className="font-playfair text-xl md:text-2xl text-[#1F1F1F] leading-relaxed mt-8 max-w-sm">
+          <p className="font-playfair text-xl md:text-2xl text-ink leading-relaxed mt-8 max-w-sm">
             We believe in staying true to{" "}
-            <strong className="text-[#C4A065] font-bold">craftsmanship</strong>, so
+            <strong className="text-brand font-bold">craftsmanship</strong>, so
             every home becomes the foundation of a lasting{" "}
-            <strong className="text-[#C4A065] font-bold">community</strong> — built
-            with <strong className="text-[#C4A065] font-bold">integrity</strong> and
-            designed for <strong className="text-[#C4A065] font-bold">generations</strong>{" "}
+            <strong className="text-brand font-bold">community</strong> — built
+            with <strong className="text-brand font-bold">integrity</strong> and
+            designed for <strong className="text-brand font-bold">generations</strong>{" "}
             to come.
           </p>
         </div>
@@ -60,10 +60,10 @@ export default function OurStory() {
             visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >
-          <span className="font-lato text-xs tracking-[0.3em] uppercase text-[#C4A065]">
+          <span className="font-lato text-xs tracking-[0.3em] uppercase text-brand">
             Our Legacy
           </span>
-          <h2 className="font-playfair text-3xl md:text-4xl text-[#1F1F1F] mt-4 mb-6 leading-tight">
+          <h2 className="font-playfair text-3xl md:text-4xl text-ink mt-4 mb-6 leading-tight">
             30 Years of Building Excellence
           </h2>
           <p className="font-lato text-sm md:text-base text-[#707070] leading-relaxed mb-5">

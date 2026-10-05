@@ -43,10 +43,10 @@ export default function StatsStrip() {
         }`}
       >
         <div className="text-center mb-12 md:mb-16">
-          <span className="font-lato text-xs tracking-[0.3em] uppercase text-[#C4A065]">
+          <span className="font-lato text-xs tracking-[0.3em] uppercase text-brand">
             Residential Portfolio
           </span>
-          <h2 className="font-playfair text-3xl md:text-4xl text-[#1F1F1F] mt-4">
+          <h2 className="font-playfair text-3xl md:text-4xl text-ink mt-4">
             Why Families Choose Us
           </h2>
         </div>
@@ -57,13 +57,13 @@ export default function StatsStrip() {
             return (
               <div
                 key={h.title}
-                className="bg-white border border-[#E5E5E5] px-6 py-9 text-center transition-all duration-300 hover:-translate-y-1 hover:border-[#C4A065] hover:shadow-lg"
+                className="bg-white border border-[#E5E5E5] px-6 py-9 text-center transition-all duration-300 hover:-translate-y-1 hover:border-brand hover:shadow-lg"
                 style={{ transitionDelay: visible ? `${i * 80}ms` : "0ms" }}
               >
-                <div className="w-12 h-12 mx-auto flex items-center justify-center bg-[#C4A065]/10 mb-5">
-                  <Icon size={22} className="text-[#C4A065]" strokeWidth={1.5} />
+                <div className="w-12 h-12 mx-auto flex items-center justify-center bg-brand/10 mb-5">
+                  <Icon size={22} className="text-brand" strokeWidth={1.5} />
                 </div>
-                <h3 className="font-playfair text-lg text-[#1F1F1F] mb-2">{h.title}</h3>
+                <h3 className="font-playfair text-lg text-ink mb-2">{h.title}</h3>
                 <p className="font-lato text-xs text-[#707070] leading-relaxed">{h.desc}</p>
               </div>
             );

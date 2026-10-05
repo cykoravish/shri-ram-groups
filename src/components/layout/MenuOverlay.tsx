@@ -88,14 +88,14 @@ export default function MenuOverlay({ open, onClose }: MenuOverlayProps) {
           className="absolute top-0 right-6 md:right-12 h-20 z-50 w-8 flex flex-col justify-center"
         >
           <span
-            className={`block h-[2px] w-full bg-[#1F1F1F] transition-all duration-500 ease-out origin-center ${
+            className={`block h-[2px] w-full bg-ink transition-all duration-500 ease-out origin-center ${
               entered
                 ? "rotate-45 translate-y-[5px] opacity-100"
                 : "rotate-0 translate-y-0 opacity-0"
             }`}
           />
           <span
-            className={`block h-[2px] w-full bg-[#1F1F1F] transition-all duration-500 ease-out origin-center ${
+            className={`block h-[2px] w-full bg-ink transition-all duration-500 ease-out origin-center ${
               entered
                 ? "-rotate-45 -translate-y-[5px] opacity-100"
                 : "rotate-0 translate-y-0 opacity-0"
@@ -115,10 +115,10 @@ export default function MenuOverlay({ open, onClose }: MenuOverlayProps) {
                 <Link
                   href={link.href}
                   onClick={onClose}
-                  className="group inline-block font-lato text-lg md:text-xl uppercase tracking-wide text-[#4F4F4F] py-2 hover:text-[#1F1F1F] transition-colors"
+                  className="group inline-block font-lato text-lg md:text-xl uppercase tracking-wide text-[#4F4F4F] py-2 hover:text-ink transition-colors"
                 >
                   {link.label}
-                  <span className="block h-[2px] w-0 bg-[#C4A065] transition-all duration-300 group-hover:w-full" />
+                  <span className="block h-[2px] w-0 bg-brand transition-all duration-300 group-hover:w-full" />
                 </Link>
               </li>
             ))}
@@ -138,10 +138,10 @@ export default function MenuOverlay({ open, onClose }: MenuOverlayProps) {
                 <Link
                   href={link.href}
                   onClick={onClose}
-                  className="group inline-block font-lato text-lg md:text-xl uppercase tracking-wide text-[#707070] py-2 hover:text-[#1F1F1F] transition-colors"
+                  className="group inline-block font-lato text-lg md:text-xl uppercase tracking-wide text-[#707070] py-2 hover:text-ink transition-colors"
                 >
                   {link.label}
-                  <span className="block h-[2px] w-0 bg-[#C4A065] transition-all duration-300 group-hover:w-full" />
+                  <span className="block h-[2px] w-0 bg-brand transition-all duration-300 group-hover:w-full" />
                 </Link>
               </li>
             ))}
@@ -154,7 +154,7 @@ export default function MenuOverlay({ open, onClose }: MenuOverlayProps) {
               key={s.label}
               href={s.href}
               aria-label={s.label}
-              className="flex items-center gap-2 text-[#707070] hover:text-[#C4A065] transition-colors text-sm uppercase tracking-wide"
+              className="flex items-center gap-2 text-[#707070] hover:text-brand transition-colors text-sm uppercase tracking-wide"
             >
               <s.icon size={16} />
               {s.label}

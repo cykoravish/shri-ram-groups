@@ -46,8 +46,8 @@ export default function CalendarChip({
   const cells = buildCalendar(year, month);
 
   return (
-    <div className="bg-white border border-[#E5DFD6] px-4 py-4 w-full max-w-[240px] mx-auto md:mx-0">
-      <p className="font-lato text-xs font-bold uppercase tracking-[0.15em] text-[#1F1F1F] text-center mb-3">
+    <div className="bg-white border border-tint-dark px-4 py-4 w-full max-w-[240px] mx-auto md:mx-0">
+      <p className="font-lato text-xs font-bold uppercase tracking-[0.15em] text-ink text-center mb-3">
         {MONTH_NAMES[month - 1]} {year}
       </p>
       <div className="grid grid-cols-7 gap-y-1">
@@ -61,10 +61,10 @@ export default function CalendarChip({
             key={i}
             className={`font-lato text-[11px] w-6 h-6 mx-auto flex items-center justify-center rounded-full ${
               c.current && c.day === highlightDay
-                ? "bg-[#C4A065] text-white font-bold"
+                ? "bg-brand text-white font-bold"
                 : c.current
                 ? "text-[#4F4F4F]"
-                : "text-[#E5DFD6]"
+                : "text-tint-dark"
             }`}
           >
             {String(c.day).padStart(2, "0")}

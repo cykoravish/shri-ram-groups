@@ -33,16 +33,16 @@ export default function FeaturedCommunities() {
       <div className="max-w-6xl mx-auto px-6">
         <div className="flex flex-col md:flex-row md:items-end md:justify-between mb-10 md:mb-14 gap-4">
           <div>
-            <span className="font-lato text-xs tracking-[0.3em] uppercase text-[#C4A065]">
+            <span className="font-lato text-xs tracking-[0.3em] uppercase text-brand">
               Where We Build
             </span>
-            <h2 className="font-lato font-bold text-3xl md:text-5xl text-[#1F1F1F] mt-3">
+            <h2 className="font-lato font-bold text-3xl md:text-5xl text-ink mt-3">
               Featured Communities
             </h2>
           </div>
           <a
             href="/residential"
-            className="font-lato text-sm uppercase tracking-wide text-[#1F1F1F] border-b border-[#C4A065] pb-1 hover:text-[#C4A065] transition-colors whitespace-nowrap"
+            className="font-lato text-sm uppercase tracking-wide text-ink border-b border-brand pb-1 hover:text-brand transition-colors whitespace-nowrap"
           >
             View All Projects →
           </a>
@@ -65,7 +65,7 @@ export default function FeaturedCommunities() {
                   {project.type}
                 </span>
               </div>
-              <h3 className="font-lato font-bold text-lg text-[#1F1F1F] group-hover:text-[#C4A065] transition-colors">
+              <h3 className="font-lato font-bold text-lg text-ink group-hover:text-brand transition-colors">
                 {project.name}
               </h3>
               <p className="font-lato text-sm text-[#707070] mt-1">

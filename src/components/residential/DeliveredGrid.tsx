@@ -66,10 +66,10 @@ export default function DeliveredGrid() {
     <section ref={ref} className="w-full bg-[#F7F7F7] py-16 md:py-24">
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-12 md:mb-16">
-          <span className="font-lato text-xs tracking-[0.3em] uppercase text-[#C4A065]">
+          <span className="font-lato text-xs tracking-[0.3em] uppercase text-brand">
             Delivered With Pride
           </span>
-          <h2 className="font-playfair text-3xl md:text-4xl text-[#1F1F1F] mt-4">
+          <h2 className="font-playfair text-3xl md:text-4xl text-ink mt-4">
             Communities We Call Home
           </h2>
         </div>
@@ -90,17 +90,17 @@ export default function DeliveredGrid() {
                   alt={p.name}
                   className="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
                 />
-                <span className="absolute top-4 left-4 bg-[#C4A065] text-[#1F1F1F] font-lato text-[10px] font-bold uppercase tracking-[0.15em] px-3 py-1">
+                <span className="absolute top-4 left-4 bg-brand text-ink font-lato text-[10px] font-bold uppercase tracking-[0.15em] px-3 py-1">
                   Delivered
                 </span>
               </div>
               <div className="p-5">
-                <h3 className="font-playfair text-xl text-[#1F1F1F]">{p.name}</h3>
-                <p className="font-lato text-xs uppercase tracking-[0.1em] text-[#C4A065] mt-1 mb-3">
+                <h3 className="font-playfair text-xl text-ink">{p.name}</h3>
+                <p className="font-lato text-xs uppercase tracking-[0.1em] text-brand mt-1 mb-3">
                   {p.location}
                 </p>
                 <p className="font-lato text-sm text-[#707070] leading-relaxed">{p.desc}</p>
-                <span className="inline-block mt-4 font-lato text-xs uppercase tracking-[0.15em] text-[#1F1F1F] border-b border-transparent group-hover:border-[#C4A065] transition-colors">
+                <span className="inline-block mt-4 font-lato text-xs uppercase tracking-[0.15em] text-ink border-b border-transparent group-hover:border-brand transition-colors">
                   View Details
                 </span>
               </div>

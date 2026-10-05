@@ -30,16 +30,16 @@ export default function EventsHero() {
         </div>
       </section>
 
-      <div className="w-full bg-[#C4A065] py-8 md:py-10 text-center px-6">
+      <div className="w-full bg-brand py-8 md:py-10 text-center px-6">
         <p
-          className={`font-lato text-xs md:text-sm tracking-[0.3em] uppercase text-[#1F1F1F]/70 transition-all duration-700 ease-out delay-150 motion-reduce:transition-none ${
+          className={`font-lato text-xs md:text-sm tracking-[0.3em] uppercase text-white/80 transition-all duration-700 ease-out delay-150 motion-reduce:transition-none ${
             show ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
           }`}
         >
           Your Home, Your Community
         </p>
         <p
-          className={`font-playfair text-xl md:text-2xl text-[#1F1F1F] mt-2 transition-all duration-700 ease-out delay-300 motion-reduce:transition-none ${
+          className={`font-playfair text-xl md:text-2xl text-white mt-2 transition-all duration-700 ease-out delay-300 motion-reduce:transition-none ${
             show ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
           }`}
         >

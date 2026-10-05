@@ -59,7 +59,7 @@ export default function CommercialProjectRow({
           <div
             className={`absolute ${
               reverse ? "-top-4 -left-4 md:-top-6 md:-left-6" : "-top-4 -right-4 md:-top-6 md:-right-6"
-            } w-full h-full border-2 border-[#C4A065]`}
+            } w-full h-full border-2 border-brand`}
           />
           <div className="relative aspect-[4/3] w-full overflow-hidden">
             <img src={image} alt={name} className="w-full h-full object-cover" />
@@ -72,7 +72,7 @@ export default function CommercialProjectRow({
             visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >
-          <h2 className="font-playfair font-bold text-4xl md:text-5xl text-[#C4A065] leading-tight uppercase">
+          <h2 className="font-playfair font-bold text-4xl md:text-5xl text-brand leading-tight uppercase">
             {name}
           </h2>
           <p className="font-lato text-lg text-[#4F4F4F] mt-2">
@@ -80,13 +80,13 @@ export default function CommercialProjectRow({
             <br />
             {city}
           </p>
-          <span className="block w-20 h-[3px] bg-[#C4A065] my-6" />
+          <span className="block w-20 h-[3px] bg-brand my-6" />
           <p className="font-lato text-sm md:text-base text-[#707070] leading-relaxed max-w-md mb-6">
             {description}
           </p>
           <a
             href={href}
-            className="group inline-flex items-center gap-2 font-lato text-sm uppercase tracking-[0.15em] text-[#C4A065] hover:text-[#1F1F1F] transition-colors"
+            className="group inline-flex items-center gap-2 font-lato text-sm uppercase tracking-[0.15em] text-brand hover:text-ink transition-colors"
           >
             Read More
             <ArrowRight size={16} className="transition-transform duration-300 group-hover:translate-x-1" />

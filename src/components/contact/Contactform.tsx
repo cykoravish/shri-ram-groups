@@ -17,7 +17,7 @@ function FloatingField({
   textarea?: boolean;
 }) {
   const base =
-    "peer w-full border border-[#DDDDDD] bg-white px-4 pt-6 pb-2 font-lato text-sm text-[#1F1F1F] outline-none transition-colors focus:border-[#C4A065]";
+    "peer w-full border border-[#DDDDDD] bg-white px-4 pt-6 pb-2 font-lato text-sm text-ink outline-none transition-colors focus:border-brand";
 
   return (
     <div className="relative">
@@ -37,12 +37,12 @@ function FloatingField({
         htmlFor={id}
         className="absolute left-4 top-4 font-lato text-[#707070] transition-all duration-200 pointer-events-none
           peer-placeholder-shown:top-4 peer-placeholder-shown:text-sm
-          peer-focus:top-1.5 peer-focus:text-[10px] peer-focus:tracking-[0.15em] peer-focus:uppercase peer-focus:text-[#C4A065]
+          peer-focus:top-1.5 peer-focus:text-[10px] peer-focus:tracking-[0.15em] peer-focus:uppercase peer-focus:text-brand
           top-1.5 text-[10px] tracking-[0.15em] uppercase"
       >
         {label}
       </label>
-      <span className="absolute bottom-0 left-0 h-[2px] w-0 bg-[#C4A065] transition-all duration-300 peer-focus:w-full" />
+      <span className="absolute bottom-0 left-0 h-[2px] w-0 bg-brand transition-all duration-300 peer-focus:w-full" />
     </div>
   );
 }
@@ -84,10 +84,10 @@ export default function ContactForm() {
             visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
           }`}
         >
-          <span className="font-lato text-xs tracking-[0.3em] uppercase text-[#C4A065]">
+          <span className="font-lato text-xs tracking-[0.3em] uppercase text-brand">
             Send A Message
           </span>
-          <h2 className="font-playfair text-3xl md:text-4xl text-[#1F1F1F] mt-4 mb-6 leading-tight">
+          <h2 className="font-playfair text-3xl md:text-4xl text-ink mt-4 mb-6 leading-tight">
             We&apos;d Love to Hear
             <br />
             About Your Plans
@@ -99,7 +99,7 @@ export default function ContactForm() {
           </p>
 
           <div className="relative inline-block">
-            <div className="absolute -top-3 -left-3 w-full h-full border-2 border-[#C4A065]" />
+            <div className="absolute -top-3 -left-3 w-full h-full border-2 border-brand" />
             <div className="relative aspect-[4/3] w-64 md:w-72 overflow-hidden">
               <img
                 src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?q=80&w=800&auto=format&fit=crop"
@@ -118,10 +118,10 @@ export default function ContactForm() {
         >
           {status === "success" ? (
             <div className="flex flex-col items-center justify-center text-center py-10 animate-[fadeSlideUp_0.5s_ease-out]">
-              <span className="flex items-center justify-center w-14 h-14 rounded-full bg-[#C4A065] text-white mb-5">
+              <span className="flex items-center justify-center w-14 h-14 rounded-full bg-brand text-white mb-5">
                 <Check size={24} />
               </span>
-              <h3 className="font-playfair text-2xl text-[#1F1F1F] mb-2">Message Sent</h3>
+              <h3 className="font-playfair text-2xl text-ink mb-2">Message Sent</h3>
               <p className="font-lato text-sm text-[#707070] max-w-xs">
                 Thank you for reaching out. Our team will be in touch shortly.
               </p>
@@ -136,9 +136,9 @@ export default function ContactForm() {
               <button
                 type="submit"
                 disabled={status === "loading"}
-                className="group relative w-full overflow-hidden bg-[#1F1F1F] text-white font-lato text-sm uppercase tracking-[0.2em] py-4 flex items-center justify-center gap-3 disabled:cursor-wait"
+                className="group relative w-full overflow-hidden bg-ink text-white font-lato text-sm uppercase tracking-[0.2em] py-4 flex items-center justify-center gap-3 disabled:cursor-wait"
               >
-                <span className="absolute inset-0 bg-[#C4A065] -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-out motion-reduce:transition-none" />
+                <span className="absolute inset-0 bg-brand -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-out motion-reduce:transition-none" />
                 <span className="relative flex items-center gap-3">
                   {status === "loading" ? (
                     <>

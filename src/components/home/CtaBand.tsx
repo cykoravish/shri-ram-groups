@@ -1,9 +1,9 @@
 export default function CtaBand() {
   return (
-    <section className="relative w-full bg-[#1F1F1F] py-16 md:py-20 overflow-hidden">
+    <section className="relative w-full bg-ink py-16 md:py-20 overflow-hidden">
       {/* Quiet diagonal accent - echoes the stats section signature */}
       <div
-        className="absolute inset-0 bg-[#C4A065]/10"
+        className="absolute inset-0 bg-brand-light/10"
         style={{ clipPath: "polygon(0 0, 35% 0, 15% 100%, 0 100%)" }}
       />
 
@@ -18,13 +18,13 @@ export default function CtaBand() {
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <a
             href="/contact-us"
-            className="font-lato text-sm uppercase tracking-wide bg-[#C4A065] hover:bg-[#BCA168] text-white px-8 py-3 transition-colors"
+            className="font-lato text-sm uppercase tracking-wide bg-white hover:bg-brand-light text-ink px-8 py-3 transition-colors"
           >
             Enquire Now
           </a>
           <a
             href="tel:+911234567890"
-            className="font-lato text-sm uppercase tracking-wide text-white border border-white/40 hover:border-[#C4A065] hover:text-[#C4A065] px-8 py-3 transition-colors"
+            className="font-lato text-sm uppercase tracking-wide text-white border border-white/40 hover:border-brand-light hover:text-brand-light px-8 py-3 transition-colors"
           >
             Call Us
           </a>
