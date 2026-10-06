@@ -19,6 +19,7 @@ export default function AboutPage() {
         image="/images/hero-about.webp"
         titleAtBottom
         focusClass="object-[50%_20%]"
+        heightClass="aspect-[1080/597] md:aspect-auto md:h-[60vh]"
         title="About Us"
         subtitle="Our Legacy"
       />
