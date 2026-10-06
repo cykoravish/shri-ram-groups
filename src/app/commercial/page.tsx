@@ -15,7 +15,9 @@ export default function CommercialPage() {
   return (
     <>
        <PageBanner
-        image="/images/shriram-business-centre-hero.webp"
+        image="/images/hero-commercial.webp"
+        bakedText
+        focusClass="object-[14%_50%] md:object-center"
         title="Ongoing Commercial Projects"
         subtitle="Commercial Portfolio"
       />

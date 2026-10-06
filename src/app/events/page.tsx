@@ -15,7 +15,8 @@ export default function EventsPage() {
     <>
       {/* <EventsHero /> */}
       <PageBanner
-        image="/images/shriram-residential-lifestyle.webp"
+        image="/images/hero-events.webp"
+        titleAtBottom
         title="Events"
         subtitle="Your Home, Your Community"
       />

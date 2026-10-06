@@ -15,7 +15,9 @@ export default function ResidentialPage() {
   return (
     <>
       <PageBanner
-        image="/images/shriram-residential-wide-2.webp"
+        image="/images/hero-residential.webp"
+        bakedText
+        focusClass="object-[14%_50%] md:object-center"
         title="Explore Our Projects"
         subtitle="Our Residences"
       />

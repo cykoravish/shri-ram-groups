@@ -16,7 +16,9 @@ export default function AboutPage() {
   return (
     <>
       <PageBanner
-        image="/images/shriram-residential-wide-1.webp"
+        image="/images/hero-about.webp"
+        titleAtBottom
+        focusClass="object-[50%_20%]"
         title="About Us"
         subtitle="Our Legacy"
       />
