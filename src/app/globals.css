@@ -2,20 +2,20 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #14253b;
+  --foreground: #171717;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --color-brand: #253751;
-  --color-on-brand: #ffffff;
-  --color-brand-light: #9db2c9;
-  --color-ink: #14253b;
-  --color-ink-deep: #0e1b2c;
-  --color-tint: #eef2f6;
-  --color-tint-light: #f4f7fa;
-  --color-tint-dark: #dce4ed;
+  --color-brand: #c4a065;
+  --color-on-brand: #1f1f1f;
+  --color-brand-light: #c4a065;
+  --color-ink: #1f1f1f;
+  --color-ink-deep: #181818;
+  --color-tint: #f1eee9;
+  --color-tint-light: #f8f5f1;
+  --color-tint-dark: #e5dfd6;
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
   --font-lato: var(--font-lato);

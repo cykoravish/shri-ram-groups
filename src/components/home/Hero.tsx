@@ -1,6 +1,6 @@
 export default function Hero() {
   return (
-    <section className="relative w-full aspect-video lg:aspect-auto lg:h-[calc(100dvh-80px-70px)] overflow-hidden bg-[#dfe6ee]">
+    <section className="relative w-full aspect-video lg:aspect-auto lg:h-[calc(100dvh-80px-70px)] overflow-hidden bg-[#efe6d6]">
       {/* The video carries its own headlines and logo, so no text/tint overlay on top.
           Poster (final logo frame) paints instantly; video swaps in as it streams. */}
       <video
