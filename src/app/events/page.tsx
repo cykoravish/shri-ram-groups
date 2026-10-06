@@ -17,6 +17,7 @@ export default function EventsPage() {
       <PageBanner
         image="/images/hero-events.webp"
         titleAtBottom
+        focusClass="object-[72%_50%] md:object-center"
         title="Events"
         subtitle="Your Home, Your Community"
       />
