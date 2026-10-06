@@ -23,11 +23,11 @@ export default function ContactHero() {
           className="object-cover object-[72%_50%] md:object-center"
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-black/40" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/35 to-black/45" />
 
         <div className="relative z-10 h-full flex flex-col items-center justify-end pb-24 md:pb-28 px-6 text-center">
           <span
-            className={`font-lato text-xs md:text-sm tracking-[0.4em] uppercase text-brand-light mb-4 transition-all duration-700 ease-out motion-reduce:transition-none ${
+            className={`font-lato text-xs md:text-sm tracking-[0.4em] uppercase text-white [text-shadow:0_1px_10px_rgba(0,0,0,0.55)] mb-4 transition-all duration-700 ease-out motion-reduce:transition-none ${
               show ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
             }`}
           >
@@ -41,7 +41,7 @@ export default function ContactHero() {
             We&apos;re Just a <span className="italic">Conversation Away</span>
           </h1>
           <p
-            className={`font-lato text-sm md:text-base text-white/80 max-w-lg mt-5 leading-relaxed transition-all duration-700 ease-out delay-300 motion-reduce:transition-none ${
+            className={`font-lato text-sm md:text-base text-white/90 [text-shadow:0_1px_10px_rgba(0,0,0,0.55)] max-w-lg mt-5 leading-relaxed transition-all duration-700 ease-out delay-300 motion-reduce:transition-none ${
               show ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
             }`}
           >
