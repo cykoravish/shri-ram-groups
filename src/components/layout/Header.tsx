@@ -29,6 +29,12 @@ export default function Header() {
             : "bg-transparent shadow-none"
         }`}
       >
+        <div
+          aria-hidden
+          className={`pointer-events-none absolute inset-x-0 top-0 -z-10 h-32 bg-gradient-to-b from-black/50 via-black/20 to-transparent transition-opacity duration-300 motion-reduce:transition-none ${
+            solid ? "opacity-0" : "opacity-100"
+          }`}
+        />
         {/* Placeholder logo - swap with client's actual logo asset */}
         <Link href="/" className="flex items-center gap-3">
           <Image

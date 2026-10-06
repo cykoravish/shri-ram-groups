@@ -57,7 +57,7 @@ export default function PageBanner({
       >
         {subtitle && (
           <span
-            className={`font-lato text-xs md:text-sm tracking-[0.4em] uppercase text-brand-light mb-4 transition-all duration-700 ease-out motion-reduce:transition-none ${
+            className={`font-lato text-xs md:text-sm tracking-[0.4em] uppercase text-white [text-shadow:0_1px_10px_rgba(0,0,0,0.55)] mb-4 transition-all duration-700 ease-out motion-reduce:transition-none ${
               show ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
             }`}
           >
