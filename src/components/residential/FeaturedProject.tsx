@@ -54,7 +54,7 @@ export default function FeaturedProject({
 
         {/* Status ribbon - diagonal cut, callback to the site's signature clip motif */}
         <span
-          className="absolute top-0 left-0 z-10 bg-brand text-white font-lato text-xs font-bold uppercase tracking-[0.15em] px-7 py-3"
+          className="absolute top-0 left-0 z-10 bg-brand text-on-brand font-lato text-xs font-bold uppercase tracking-[0.15em] px-7 py-3"
           style={{ clipPath: "polygon(0 0, 100% 0, 85% 100%, 0 100%)" }}
         >
           {status}

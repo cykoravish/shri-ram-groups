@@ -60,7 +60,7 @@ function BigBlockStat({
 
       {/* Number: white over the navy cut, dark navy over the light area */}
       {[
-        { clip: goldClip, color: "text-white", hidden: false },
+        { clip: goldClip, color: "text-on-brand", hidden: false },
         { clip: lightClip, color: "text-ink", hidden: true },
       ].map((l) => (
         <div
@@ -141,11 +141,11 @@ function LegacyBanner({ start }: { start: boolean }) {
             style={{ clipPath: "polygon(0 0, 100% 0, 85% 100%, 0% 100%)" }}
           />
           <div className="relative z-10 px-6 py-4 md:px-10 md:py-6">
-            <span className="font-lato font-bold text-7xl md:text-8xl lg:text-9xl text-white leading-none">
+            <span className="font-lato font-bold text-7xl md:text-8xl lg:text-9xl text-on-brand leading-none">
               {years}
               <span className="text-3xl md:text-4xl align-top ml-1">+</span>
             </span>
-            <span className="block font-lato text-xs md:text-sm tracking-[0.4em] uppercase text-brand-light mt-1">
+            <span className="block font-lato text-xs md:text-sm tracking-[0.4em] uppercase text-on-brand/70 mt-1">
               Years
             </span>
           </div>

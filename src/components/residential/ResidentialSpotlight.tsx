@@ -33,7 +33,7 @@ export default function ResidentialSpotlight() {
         >
           <div className="relative aspect-[4/3] md:aspect-auto overflow-hidden">
             <img src={project.image} alt={project.name} className="w-full h-full object-cover" />
-            <span className="absolute top-5 left-5 bg-brand text-white font-lato text-[11px] font-bold uppercase tracking-[0.15em] px-4 py-1.5">
+            <span className="absolute top-5 left-5 bg-brand text-on-brand font-lato text-[11px] font-bold uppercase tracking-[0.15em] px-4 py-1.5">
               {project.status}
             </span>
           </div>
@@ -46,7 +46,7 @@ export default function ResidentialSpotlight() {
             </p>
             
             <a href={project.href}
-              className="group inline-flex items-center gap-2 w-fit bg-ink text-white font-lato text-xs uppercase tracking-[0.2em] px-6 py-3.5 hover:bg-brand hover:text-white transition-colors"
+              className="group inline-flex items-center gap-2 w-fit bg-ink text-white font-lato text-xs uppercase tracking-[0.2em] px-6 py-3.5 hover:bg-brand hover:text-on-brand transition-colors"
             >
               Explore Project
               <ArrowRight size={14} className="transition-transform duration-300 group-hover:translate-x-1" />

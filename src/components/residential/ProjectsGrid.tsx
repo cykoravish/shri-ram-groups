@@ -29,7 +29,7 @@ export default function ProjectsGrid() {
               aria-pressed={active === f}
               className={`font-lato text-xs uppercase tracking-[0.15em] px-5 py-2.5 border transition-colors ${
                 active === f
-                  ? "bg-brand border-brand text-white"
+                  ? "bg-brand border-brand text-on-brand"
                   : "border-[#DDDDDD] text-[#707070] hover:border-brand hover:text-ink"
               }`}
             >
