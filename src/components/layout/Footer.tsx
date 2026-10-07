@@ -26,11 +26,12 @@ export default function Footer() {
           {/* Brand + address */}
           <div>
             <Image
-              src="/images/shriram-logo-footer.png"
-              alt="Shriram Realty"
-              width={310}
-              height={320}
-              className="h-16 w-auto"
+              src="/images/shriram-realty-logo.png"
+              alt="ShriRam Realty - Gateway to Prosperity"
+              width={1200}
+              height={551}
+              sizes="220px"
+              className="h-20 w-auto"
             />
             <p className="font-lato text-sm text-[#707070] mt-4 leading-relaxed max-w-xs">
               Regional Office, NH-24, Ghaziabad, Uttar Pradesh, India
