@@ -8,13 +8,25 @@ import { ChevronDown, Phone } from "lucide-react";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [solid, setSolid] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  // Phones and portrait tablets: the page starts with a band under the header, so the header
+  // stays white there (the navy logo would be invisible on it). Desktop keeps the transparent header.
+  const [compact, setCompact] = useState(false);
+  const solid = scrolled || compact;
 
   useEffect(() => {
-    const onScroll = () => setSolid(window.scrollY > 60);
+    const onScroll = () => setScrolled(window.scrollY > 60);
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  useEffect(() => {
+    const mq = window.matchMedia("(max-width: 767px), (orientation: portrait)");
+    const update = () => setCompact(mq.matches);
+    update();
+    mq.addEventListener("change", update);
+    return () => mq.removeEventListener("change", update);
   }, []);
 
   const linkColor = solid ? "text-[#4F4F4F]" : "text-white";
@@ -26,7 +38,7 @@ export default function Header() {
         className={`fixed top-0 w-full z-40 px-6 md:px-12 h-20 flex items-center justify-between transition-all duration-300 motion-reduce:transition-none ${
           solid
             ? "bg-white shadow-[0_2px_12px_rgba(0,0,0,0.08)]"
-            : "bg-transparent shadow-none"
+            : "bg-transparent shadow-none max-md:bg-white portrait:bg-white"
         }`}
       >
         <div
