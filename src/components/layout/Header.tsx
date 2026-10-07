@@ -35,32 +35,33 @@ export default function Header() {
             solid ? "opacity-0" : "opacity-100"
           }`}
         />
-        {/* Placeholder logo - swap with client's actual logo asset */}
-        <Link href="/" className="flex items-center gap-3">
+        <Link
+          href="/"
+          aria-label="ShriRam Realty - Home"
+          className="relative block h-12 sm:h-14 md:h-16 aspect-[1200/551] shrink-0"
+        >
+          {/* Colour logo on the solid white header, light logo over photos/video */}
           <Image
-            src="/images/shriram-logo-header.png"
-            alt="Shriram Realty"
-            width={152}
-            height={200}
+            src="/images/shriram-realty-logo.png"
+            alt="ShriRam Realty - Gateway to Prosperity"
+            fill
             priority
-            className="h-10 w-auto md:h-12 transition-all duration-300"
+            sizes="140px"
+            className={`object-contain object-left transition-opacity duration-300 motion-reduce:transition-none ${
+              solid ? "opacity-100" : "opacity-0"
+            }`}
           />
-          <div className="flex flex-col leading-tight">
-            <span
-              className={`font-lato font-bold text-lg sm:text-xl md:text-2xl tracking-wide transition-colors duration-300 motion-reduce:transition-none ${
-                solid ? "text-[#4F4F4F]" : "text-white"
-              }`}
-            >
-              ShriRam<span className={solid ? "text-brand" : "text-brand-light"}>Group</span>
-            </span>
-            <span
-              className={`font-lato text-[9px] sm:text-[10px] tracking-[0.2em] uppercase transition-colors duration-300 motion-reduce:transition-none ${
-                solid ? "text-[#707070]" : "text-white/70"
-              }`}
-            >
-              Experience Excellence
-            </span>
-          </div>
+          <Image
+            src="/images/shriram-realty-logo-light.png"
+            alt=""
+            aria-hidden
+            fill
+            priority
+            sizes="140px"
+            className={`object-contain object-left transition-opacity duration-300 motion-reduce:transition-none ${
+              solid ? "opacity-0" : "opacity-100"
+            }`}
+          />
         </Link>
 
         <div className="flex items-center gap-10 md:gap-14">
