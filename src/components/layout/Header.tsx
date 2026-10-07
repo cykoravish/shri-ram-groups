@@ -38,30 +38,24 @@ export default function Header() {
         <Link
           href="/"
           aria-label="ShriRam Realty - Home"
-          className="relative block h-12 sm:h-14 md:h-16 aspect-[1200/551] shrink-0"
+          className={`self-start -ml-6 md:-ml-12 flex items-center bg-white pl-6 md:pl-12 pr-5 md:pr-8 transition-all duration-300 motion-reduce:transition-none ${
+            solid
+              ? "h-20 rounded-br-none shadow-none"
+              : "h-[88px] md:h-24 rounded-br-3xl shadow-[0_10px_30px_rgba(0,0,0,0.18)]"
+          }`}
         >
-          {/* Colour logo on the solid white header, light logo over photos/video */}
-          <Image
-            src="/images/shriram-realty-logo.png"
-            alt="ShriRam Realty - Gateway to Prosperity"
-            fill
-            priority
-            sizes="140px"
-            className={`object-contain object-left transition-opacity duration-300 motion-reduce:transition-none ${
-              solid ? "opacity-100" : "opacity-0"
-            }`}
-          />
-          <Image
-            src="/images/shriram-realty-logo-light.png"
-            alt=""
-            aria-hidden
-            fill
-            priority
-            sizes="140px"
-            className={`object-contain object-left transition-opacity duration-300 motion-reduce:transition-none ${
-              solid ? "opacity-0" : "opacity-100"
-            }`}
-          />
+          {/* One logo only (client's file). A white tab keeps it readable over photos and video;
+              it blends into the header once the header turns solid white on scroll. */}
+          <span className="relative block h-12 md:h-14 aspect-[1200/551]">
+            <Image
+              src="/images/shriram-realty-logo.png"
+              alt="ShriRam Realty - Gateway to Prosperity"
+              fill
+              priority
+              sizes="140px"
+              className="object-contain object-left"
+            />
+          </span>
         </Link>
 
         <div className="flex items-center gap-10 md:gap-14">
