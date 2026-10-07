@@ -1,13 +1,12 @@
 export default function Hero() {
   return (
-    // 80px band (pt-20) sits behind the fixed header so nav text stays readable
-    // and the video's own headline is never hidden under it.
-    <section className="w-full bg-ink pt-20">
-      {/* Full 16:9 frame, never cropped. The video carries its own headlines and logo,
-          so there is no text/tint overlay. Poster (final logo frame) paints instantly. */}
-      <div className="relative w-full aspect-video overflow-hidden">
+    // Landscape screens (laptop/desktop/landscape tablet): video starts at the very top behind the
+    // header and fills exactly one screen; extra height is trimmed (mostly from the bottom) by object-cover.
+    // Portrait screens (phones/portrait tablets): full 16:9 frame under a band, so nothing important is cut.
+    <section className="w-full bg-ink pt-20 md:landscape:pt-0">
+      <div className="relative w-full aspect-video overflow-hidden md:landscape:aspect-auto md:landscape:h-[100dvh]">
         <video
-          className="absolute inset-0 w-full h-full object-cover"
+          className="absolute inset-0 w-full h-full object-cover object-[50%_20%]"
           src="/videos/hero.mp4"
           poster="/images/hero-poster.jpg"
           autoPlay
