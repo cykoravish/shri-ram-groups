@@ -2,7 +2,8 @@
 
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
-import { Award, Building2, HardHat, Users, type LucideIcon } from "lucide-react";
+import type { ComponentType, SVGProps } from "react";
+import { AwardIcon, BuildingsIcon, CraneIcon, PeopleIcon } from "./StatIcons";
 
 function useCountUp(target: number, start: boolean, duration = 1800) {
   const [value, setValue] = useState(0);
@@ -34,7 +35,7 @@ function StatCard({
   start,
   indian = false,
 }: {
-  icon: LucideIcon;
+  icon: ComponentType<SVGProps<SVGSVGElement>>;
   value: number;
   suffix: string;
   label: string;
@@ -45,8 +46,8 @@ function StatCard({
 
   return (
     <div className="bg-white/95 px-5 py-6 md:py-7 text-center shadow-[0_12px_32px_rgba(20,37,59,0.14)] transition-transform duration-300 ease-out hover:-translate-y-1">
-      <span className="mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-full bg-tint text-brand">
-        <Icon className="h-6 w-6" strokeWidth={1.4} aria-hidden />
+      <span className="mx-auto mb-3 flex h-14 w-14 items-center justify-center rounded-full bg-tint text-brand">
+        <Icon className="h-9 w-9" />
       </span>
       <span className="block font-playfair text-4xl sm:text-5xl lg:text-4xl xl:text-[2.6rem] leading-none text-brand whitespace-nowrap">
         {indian ? count.toLocaleString("en-IN") : count}
@@ -178,10 +179,10 @@ export default function AreaStats() {
           </div>
 
           <div className="mt-8 md:mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-5">
-            <StatCard icon={Building2} value={900000} suffix="+" label="Sq. Ft. Delivered" start={visible} indian />
-            <StatCard icon={Award} value={26} suffix="" label="Projects Successfully Delivered" start={visible} />
-            <StatCard icon={HardHat} value={2} suffix="" label="Ongoing Projects" start={visible} />
-            <StatCard icon={Users} value={700} suffix="+" label="Happy Customers" start={visible} />
+            <StatCard icon={BuildingsIcon} value={900000} suffix="+" label="Sq. Ft. Delivered" start={visible} indian />
+            <StatCard icon={AwardIcon} value={26} suffix="" label="Projects Successfully Delivered" start={visible} />
+            <StatCard icon={CraneIcon} value={2} suffix="" label="Ongoing Projects" start={visible} />
+            <StatCard icon={PeopleIcon} value={700} suffix="+" label="Happy Customers" start={visible} />
           </div>
         </div>
       </div>
