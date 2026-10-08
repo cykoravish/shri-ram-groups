@@ -24,90 +24,34 @@ function useCountUp(target: number, start: boolean, duration = 1800) {
   return value;
 }
 
-function BigBlockStat({
+function StatBox({
   value,
   suffix,
   label,
-  reverse,
   start,
+  indian = false,
 }: {
   value: number;
   suffix: string;
   label: string;
-  reverse?: boolean;
   start: boolean;
+  indian?: boolean;
 }) {
   const count = useCountUp(value, start);
 
-  // Diagonal "skyline cut" clip paths - mirrored for the reversed block
-  const goldClip = reverse
-    ? "polygon(100% 0, 42% 0, 58% 100%, 100% 100%)"
-    : "polygon(0 0, 58% 0, 42% 100%, 0 100%)";
-  // Complement of the navy cut, so the number can switch colour along the diagonal
-  const lightClip = reverse
-    ? "polygon(0 0, 42% 0, 58% 100%, 0 100%)"
-    : "polygon(58% 0, 100% 0, 100% 100%, 42% 100%)";
-
   return (
-    <div className="group relative h-56 md:h-64 overflow-hidden transition-transform duration-300 ease-out hover:scale-[1.015]">
-      {/* Base layer */}
-      <div className="absolute inset-0 bg-tint" />
-      {/* Diagonal gold cut */}
-      <div
-        className="absolute inset-0 bg-brand transition-[filter] duration-300 group-hover:brightness-[1.06]"
-        style={{ clipPath: goldClip }}
-      />
-
-      {/* Number: white over the navy cut, dark navy over the light area */}
-      {[
-        { clip: goldClip, color: "text-on-brand", hidden: false },
-        { clip: lightClip, color: "text-ink", hidden: true },
-      ].map((l) => (
-        <div
-          key={l.color}
-          aria-hidden={l.hidden || undefined}
-          className="absolute inset-0 z-10 flex items-center justify-center"
-          style={{ clipPath: l.clip }}
-        >
-          <span className={`font-lato font-bold text-5xl md:text-6xl lg:text-7xl ${l.color} leading-none`}>
-            {count.toLocaleString("en-IN")}
-            <span className="text-3xl md:text-4xl align-top ml-1">{suffix}</span>
-          </span>
-        </div>
-      ))}
-
-      <div className="absolute bottom-0 left-0 w-full bg-[#4F4F4F]/90 py-3">
-        <span className="block text-center font-lato text-xs md:text-sm uppercase tracking-[0.2em] text-white">
+    <div className="group relative h-44 md:h-52 overflow-hidden bg-brand transition-transform duration-300 ease-out hover:scale-[1.015]">
+      <div className="absolute inset-0 pb-11 flex items-center justify-center">
+        <span className="font-lato font-bold text-5xl md:text-6xl lg:text-7xl text-on-brand leading-none whitespace-nowrap">
+          {indian ? count.toLocaleString("en-IN") : count}
+          <span className="text-3xl md:text-4xl align-top ml-1">{suffix}</span>
+        </span>
+      </div>
+      <div className="absolute bottom-0 left-0 w-full bg-black/20 py-3 px-3">
+        <span className="block text-center font-lato text-xs md:text-sm uppercase tracking-[0.2em] text-on-brand">
           {label}
         </span>
       </div>
-    </div>
-  );
-}
-
-function SimpleStat({
-  value,
-  suffix,
-  label,
-  start,
-}: {
-  value: number;
-  suffix: string;
-  label: string;
-  start: boolean;
-}) {
-  const count = useCountUp(value, start);
-
-  return (
-    <div className="flex items-center gap-4 md:gap-6 py-8 md:py-0">
-      <span className="font-lato font-bold text-5xl md:text-6xl text-ink leading-none whitespace-nowrap">
-        {count}
-        <span className="text-brand">{suffix}</span>
-      </span>
-      <span className="w-px h-10 bg-[#DDDDDD] hidden sm:block rotate-12" />
-      <span className="font-lato text-sm md:text-base text-[#707070] max-w-[10rem] leading-snug">
-        {label}
-      </span>
     </div>
   );
 }
@@ -134,12 +78,9 @@ function LegacyBanner({ start }: { start: boolean }) {
       </span>
 
       <div className="relative z-10 max-w-6xl mx-auto px-6 py-16 md:py-24 flex flex-col md:flex-row items-center gap-10 md:gap-14">
-        {/* Left: big diagonal number block */}
+        {/* Left: big number block */}
         <div className="relative shrink-0">
-          <div
-            className="absolute -inset-4 md:-inset-6 bg-brand"
-            style={{ clipPath: "polygon(0 0, 100% 0, 85% 100%, 0% 100%)" }}
-          />
+          <div className="absolute -inset-4 md:-inset-6 bg-brand" />
           <div className="relative z-10 px-6 py-4 md:px-10 md:py-6">
             <span className="font-lato font-bold text-7xl md:text-8xl lg:text-9xl text-on-brand leading-none">
               {years}
@@ -169,11 +110,6 @@ function LegacyBanner({ start }: { start: boolean }) {
         </div>
       </div>
 
-      {/* Diagonal cut at the bottom edge, transitioning into the white section below */}
-      <div
-        className="absolute bottom-0 left-0 w-full h-6 md:h-10 bg-white"
-        style={{ clipPath: "polygon(0 100%, 100% 0, 100% 100%)" }}
-      />
     </div>
   );
 }
@@ -218,43 +154,13 @@ export default function AreaStats() {
           </p>
         </div>
 
-        {/* Primary metrics - two-tone diagonal blocks */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-1 md:gap-2 mb-12 md:mb-16">
-          <BigBlockStat
-            value={900000}
-            suffix="+"
-            label="Sq. Ft. Approx. Area Delivered"
-            start={visible}
-          />
-          <BigBlockStat
-            value={2}
-            suffix=""
-            label="Ongoing Projects"
-            reverse
-            start={visible}
-          />
+        {/* Four equal, straight stat boxes */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 md:gap-3">
+          <StatBox value={900000} suffix="+" label="Sq. Ft. Approx. Area Delivered" start={visible} indian />
+          <StatBox value={2} suffix="" label="Ongoing Projects" start={visible} />
+          <StatBox value={700} suffix="+" label="Happy Customers" start={visible} />
+          <StatBox value={26} suffix="" label="Projects Successfully Delivered" start={visible} />
         </div>
-
-        {/* Secondary metric - quiet numeric treatment */}
-        {/* Secondary metrics - quiet numeric treatment */}
-<div className="grid grid-cols-1 sm:grid-cols-2 gap-x-12 divide-y sm:divide-y-0 sm:divide-x divide-[#DDDDDD] justify-center max-w-xl mx-auto">
-  <div className="sm:pr-12 flex justify-center sm:justify-end">
-    <SimpleStat
-      value={700}
-      suffix="+"
-      label="Happy Customers"
-      start={visible}
-    />
-  </div>
-  <div className="sm:pl-12 flex justify-center sm:justify-start">
-    <SimpleStat
-      value={26}
-      suffix=""
-      label="Projects Successfully Delivered"
-      start={visible}
-    />
-  </div>
-</div>
       </div>
     </section>
   );
