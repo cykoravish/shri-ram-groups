@@ -44,18 +44,18 @@ function StatCard({
   const count = useCountUp(value, start);
 
   return (
-    <div className="bg-white/95 px-5 py-8 md:py-10 text-center shadow-[0_12px_32px_rgba(20,37,59,0.14)] transition-transform duration-300 ease-out hover:-translate-y-1">
-      <span className="mx-auto mb-5 flex h-14 w-14 items-center justify-center rounded-full bg-tint text-brand">
-        <Icon className="h-7 w-7" strokeWidth={1.4} aria-hidden />
+    <div className="bg-white/95 px-5 py-6 md:py-7 text-center shadow-[0_12px_32px_rgba(20,37,59,0.14)] transition-transform duration-300 ease-out hover:-translate-y-1">
+      <span className="mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-full bg-tint text-brand">
+        <Icon className="h-6 w-6" strokeWidth={1.4} aria-hidden />
       </span>
       <span className="block font-playfair text-4xl sm:text-5xl lg:text-4xl xl:text-[2.6rem] leading-none text-brand whitespace-nowrap">
         {indian ? count.toLocaleString("en-IN") : count}
         {suffix}
       </span>
-      <span className="mt-4 block font-lato text-[0.7rem] sm:text-xs uppercase tracking-[0.22em] text-ink leading-relaxed">
+      <span className="mt-3 block font-lato text-[0.7rem] sm:text-xs uppercase tracking-[0.22em] text-ink leading-relaxed">
         {label}
       </span>
-      <span className="mx-auto mt-5 block h-px w-10 bg-brand" />
+      <span className="mx-auto mt-4 block h-px w-10 bg-brand" />
     </div>
   );
 }
@@ -159,25 +159,25 @@ export default function AreaStats() {
         />
         <div className="absolute inset-0 bg-gradient-to-b from-white/85 via-white/55 to-white/10" />
 
-        <div className="relative z-10 max-w-6xl mx-auto px-6 pt-16 md:pt-24 pb-14 md:pb-20">
+        <div className="relative z-10 max-w-6xl mx-auto px-6 pt-10 md:pt-14 pb-10 md:pb-12">
           <div className="text-center max-w-3xl mx-auto">
             <span className="block font-lato text-xs tracking-[0.3em] uppercase text-brand">
               Our Journey in Numbers
             </span>
             <span className="mx-auto mt-4 block h-px w-16 bg-brand" />
-            <h2 className="font-playfair text-4xl md:text-5xl lg:text-6xl text-ink leading-tight mt-8">
+            <h2 className="font-playfair text-3xl md:text-4xl lg:text-5xl text-ink leading-tight mt-5">
               Built on Trust.
               <br />
               Delivered with Pride.
             </h2>
-            <p className="font-lato text-sm md:text-base text-[#4F4F4F] mt-6 max-w-xl mx-auto leading-relaxed">
+            <p className="font-lato text-sm md:text-base text-[#4F4F4F] mt-4 max-w-xl mx-auto leading-relaxed">
               From landmark developments to thousands of happy families, our
               journey reflects a commitment to quality, trust and a better
               tomorrow.
             </p>
           </div>
 
-          <div className="mt-12 md:mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-5">
+          <div className="mt-8 md:mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-5">
             <StatCard icon={Building2} value={900000} suffix="+" label="Sq. Ft. Delivered" start={visible} indian />
             <StatCard icon={Award} value={26} suffix="" label="Projects Successfully Delivered" start={visible} />
             <StatCard icon={HardHat} value={2} suffix="" label="Ongoing Projects" start={visible} />
