@@ -41,7 +41,10 @@ function StatBox({
 
   return (
     // Two straight parts split by a vertical edge: number on the left, text on the right
-    <div className="group flex h-24 sm:h-28 lg:h-32 overflow-hidden transition-transform duration-300 ease-out hover:scale-[1.015]">
+    <div className="group relative transition-transform duration-300 ease-out hover:scale-[1.015]">
+      {/* Offset outline frame, same treatment as the site's images */}
+      <div className="pointer-events-none absolute -top-2 -right-2 md:-top-3 md:-right-3 w-full h-full border-2 border-brand" />
+      <div className="relative flex h-24 sm:h-28 lg:h-32 overflow-hidden">
       <div className="flex basis-[48%] shrink-0 items-center justify-center bg-brand px-2">
         <span className="font-lato font-bold text-[1.6rem] sm:text-5xl lg:text-4xl text-on-brand leading-none whitespace-nowrap">
           {indian ? count.toLocaleString("en-IN") : count}
@@ -52,6 +55,7 @@ function StatBox({
         <span className="font-lato text-[0.7rem] sm:text-sm uppercase tracking-[0.16em] sm:tracking-[0.2em] text-ink leading-snug">
           {label}
         </span>
+      </div>
       </div>
     </div>
   );
@@ -156,7 +160,7 @@ export default function AreaStats() {
         </div>
 
         {/* Four equal stat boxes: number | text, split by a straight edge */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-2 md:gap-3">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8">
           <StatBox value={900000} suffix="+" label="Sq. Ft. Approx. Area Delivered" start={visible} indian />
           <StatBox value={2} suffix="" label="Ongoing Projects" start={visible} />
           <StatBox value={700} suffix="+" label="Happy Customers" start={visible} />
