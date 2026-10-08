@@ -40,15 +40,16 @@ function StatBox({
   const count = useCountUp(value, start);
 
   return (
-    <div className="group relative h-44 md:h-52 overflow-hidden bg-brand transition-transform duration-300 ease-out hover:scale-[1.015]">
-      <div className="absolute inset-0 pb-11 flex items-center justify-center">
-        <span className="font-lato font-bold text-5xl md:text-6xl lg:text-7xl text-on-brand leading-none whitespace-nowrap">
+    // Two straight parts split by a vertical edge: number on the left, text on the right
+    <div className="group flex h-24 sm:h-28 lg:h-32 overflow-hidden transition-transform duration-300 ease-out hover:scale-[1.015]">
+      <div className="flex basis-[48%] shrink-0 items-center justify-center bg-brand px-2">
+        <span className="font-lato font-bold text-[1.6rem] sm:text-5xl lg:text-4xl text-on-brand leading-none whitespace-nowrap">
           {indian ? count.toLocaleString("en-IN") : count}
-          <span className="text-3xl md:text-4xl align-top ml-1">{suffix}</span>
+          <span className="text-xl sm:text-3xl lg:text-2xl align-top ml-0.5">{suffix}</span>
         </span>
       </div>
-      <div className="absolute bottom-0 left-0 w-full bg-black/20 py-3 px-3">
-        <span className="block text-center font-lato text-xs md:text-sm uppercase tracking-[0.2em] text-on-brand">
+      <div className="flex flex-1 items-center bg-tint px-4 sm:px-6">
+        <span className="font-lato text-[0.7rem] sm:text-sm uppercase tracking-[0.16em] sm:tracking-[0.2em] text-ink leading-snug">
           {label}
         </span>
       </div>
@@ -154,8 +155,8 @@ export default function AreaStats() {
           </p>
         </div>
 
-        {/* Four equal, straight stat boxes */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 md:gap-3">
+        {/* Four equal stat boxes: number | text, split by a straight edge */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-2 md:gap-3">
           <StatBox value={900000} suffix="+" label="Sq. Ft. Approx. Area Delivered" start={visible} indian />
           <StatBox value={2} suffix="" label="Ongoing Projects" start={visible} />
           <StatBox value={700} suffix="+" label="Happy Customers" start={visible} />
