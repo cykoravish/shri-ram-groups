@@ -1,6 +1,7 @@
 "use client";
 import { ArrowRight } from "lucide-react";
 import { projects } from "./projectsData";
+import ProjectImage from "./ProjectImage";
 import { useInViewAnimation } from "@/hooks/useInViewAnimation";
 
 export default function ResidentialSpotlight() {
@@ -32,7 +33,7 @@ export default function ResidentialSpotlight() {
           }`}
         >
           <div className="relative aspect-[4/3] md:aspect-auto overflow-hidden">
-            <img src={project.image} alt={project.name} className="w-full h-full object-cover" />
+            <ProjectImage src={project.image} alt={project.name} cutout={project.cutout} />
             <span className="absolute top-5 left-5 bg-brand text-on-brand font-lato text-[11px] font-bold uppercase tracking-[0.15em] px-4 py-1.5">
               {project.status}
             </span>

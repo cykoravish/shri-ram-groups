@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { ArrowRight } from "lucide-react";
+import ProjectImage from "../residential/ProjectImage";
 
 interface CommercialProjectRowProps {
   name: string;
@@ -9,6 +10,7 @@ interface CommercialProjectRowProps {
   city: string;
   description: string;
   image: string;
+  cutout?: boolean;
   href: string;
   reverse?: boolean;
   tone?: "white" | "tint";
@@ -20,6 +22,7 @@ export default function CommercialProjectRow({
   city,
   description,
   image,
+  cutout,
   href,
   reverse,
   tone = "white",
@@ -62,7 +65,7 @@ export default function CommercialProjectRow({
             } w-full h-full border-2 border-brand`}
           />
           <div className="relative aspect-[4/3] w-full overflow-hidden">
-            <img src={image} alt={name} className="w-full h-full object-cover" />
+            <ProjectImage src={image} alt={name} cutout={cutout} />
           </div>
         </div>
 

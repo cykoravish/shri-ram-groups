@@ -7,35 +7,40 @@ export interface Project {
   href: string;
   featured?: boolean;
   description?: string;
+  /** transparent cut-out render of the building (shown on a gradient, not cropped) */
+  cutout?: boolean;
 }
 
 export const projects: Project[] = [
   {
     id: "shriram-heights",
-    name: "Shriram Heights",
+    name: "ShriRam Heights",
     status: "New Launch",
     location: "Ghaziabad",
-    image: "/images/shriram-heights-building.webp",
-    href: "#",
+    image: "/images/project-shriram-heights.webp",
+    cutout: true,
+    href: "/residential",
     featured: true,
     description:
       "Thoughtfully designed homes that bring together modern comfort, quality construction and a better standard of everyday living.",
   },
   {
-    id: "skyline-heights",
-    name: "Skyline Heights",
+    id: "shriram-northview",
+    name: "ShriRam NorthView",
     status: "Ready to Move",
     location: "Ghaziabad",
-    image: "/images/shriram-residential-wide-1.webp",
-    href: "#",
+    image: "/images/project-shriram-northview.webp",
+    cutout: true,
+    href: "https://www.shriramnorthview.com/",
   },
   {
-    id: "garden-residency",
-    name: "Garden Residency",
+    id: "shriram-residency",
+    name: "ShriRam Residency",
     status: "Under Construction",
     location: "Ghaziabad",
-    image: "/images/shriram-residential-lifestyle.webp",
-    href: "#",
+    image: "/images/project-shriram-residency.webp",
+    cutout: true,
+    href: "/residential",
   },
   {
     id: "silver-birch",

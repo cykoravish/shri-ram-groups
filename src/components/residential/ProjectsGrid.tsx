@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import { projects } from "./projectsData";
+import ProjectImage from "./ProjectImage";
 
 const filters = ["All", "New Launch", "Ready to Move", "Under Construction", "Delivered"] as const;
 
@@ -40,12 +41,18 @@ export default function ProjectsGrid() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {filtered.map((p) => (
-            <a key={p.id} href={p.href} className="group block">
+            <a
+              key={p.id}
+              href={p.href}
+              className="group block"
+              {...(p.href.startsWith("http") ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+            >
               <div className="relative aspect-[4/3] overflow-hidden mb-4">
-                <img
+                <ProjectImage
                   src={p.image}
                   alt={p.name}
-                  className="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
+                  cutout={p.cutout}
+                  className="transition-transform duration-500 ease-out group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-colors duration-300" />
                 <span className="absolute top-4 left-4 bg-white/90 font-lato text-[10px] uppercase tracking-[0.15em] text-[#4F4F4F] px-3 py-1">
