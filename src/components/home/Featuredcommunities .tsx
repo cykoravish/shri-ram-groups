@@ -1,29 +1,35 @@
 "use client";
 
+import ProjectImage from "../residential/ProjectImage";
+
 const projects = [
   {
-    name: "The Meadows",
+    name: "ShriRam Heights",
     location: "Ghaziabad",
     type: "Residential",
-    image: "/images/shriram-residential-wide-1.webp",
+    image: "/images/project-shriram-heights.webp",
+    href: "/residential",
   },
   {
-    name: "Skyline Heights",
+    name: "ShriRam NorthView",
     location: "Ghaziabad",
     type: "Residential",
-    image: "/images/shriram-residential-wide-2.webp",
+    image: "/images/project-shriram-northview.webp",
+    href: "https://www.shriramnorthview.com/",
   },
   {
-    name: "Business Square",
-    location: "Ghaziabad",
+    name: "ShriRam Business Centre",
+    location: "Sector 19, Noida",
     type: "Commercial",
-    image: "/images/shriram-business-centre-hero.webp",
+    image: "/images/project-shriram-business-centre.webp",
+    href: "/commercial",
   },
   {
-    name: "Garden Residency",
+    name: "ShriRam Residency",
     location: "Ghaziabad",
     type: "Residential",
-    image: "/images/shriram-heights-building.webp",
+    image: "/images/project-shriram-residency.webp",
+    href: "/residential",
   },
 ];
 
@@ -52,14 +58,16 @@ export default function FeaturedCommunities() {
           {projects.map((project) => (
             <a
               key={project.name}
-              href="#"
+              href={project.href}
               className="group block"
+              {...(project.href.startsWith("http") ? { target: "_blank", rel: "noopener noreferrer" } : {})}
             >
-              <div className="relative aspect-[3/4] overflow-hidden mb-4">
-                <img
+              <div className="relative aspect-[4/3] overflow-hidden mb-4">
+                <ProjectImage
                   src={project.image}
                   alt={project.name}
-                  className="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
+                  cutout
+                  className="transition-transform duration-500 ease-out group-hover:scale-105"
                 />
                 <span className="absolute top-4 left-4 bg-white/90 font-lato text-[10px] uppercase tracking-[0.15em] text-[#4F4F4F] px-3 py-1">
                   {project.type}

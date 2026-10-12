@@ -7,8 +7,9 @@ const projects = [
     city: "Noida",
     description:
       "A modern glass-fronted business address with Grade-A office and retail space, currently home to an IDBI Bank branch — designed to elevate your business presence.",
-    image: "/images/shriram-business-centre-hero.webp",
-    href: "#",
+    image: "/images/project-shriram-business-centre.webp",
+    cutout: true,
+    href: "/commercial",
   },
   {
     name: "Vertex Courtyard",
