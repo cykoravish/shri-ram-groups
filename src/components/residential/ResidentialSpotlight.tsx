@@ -1,18 +1,65 @@
 "use client";
 import { ArrowRight } from "lucide-react";
-import { projects } from "./projectsData";
+import { projects, type Project } from "./projectsData";
 import ProjectImage from "./ProjectImage";
 import { useInViewAnimation } from "@/hooks/useInViewAnimation";
 
-export default function ResidentialSpotlight() {
-  const project = projects.find((p) => p.featured) ?? projects[0];
+/** White spotlight card (image + details). Used for the New Launch and the Already Delivered blocks. */
+export function SpotlightCard({
+  project,
+  eyebrow = "Spotlight",
+  reverse = false,
+}: {
+  project: Project;
+  eyebrow?: string;
+  reverse?: boolean;
+}) {
   const { ref, visible } = useInViewAnimation(0.2);
+  const external = project.href.startsWith("http");
 
   return (
-    <section
+    <div
       ref={ref}
-      className="relative w-full bg-gradient-to-b from-ink via-ink-deep to-ink pt-14 md:pt-20 pb-16 md:pb-24 overflow-hidden"
+      className={`bg-white shadow-2xl grid grid-cols-1 md:grid-cols-2 transition-all duration-700 ease-out motion-reduce:transition-none ${
+        visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+      }`}
     >
+      <div
+        className={`relative aspect-[4/3] md:aspect-auto overflow-hidden ${reverse ? "md:order-2" : ""}`}
+      >
+        <ProjectImage src={project.image} alt={project.name} cutout={project.cutout} />
+        <span className="absolute top-5 left-5 bg-brand text-on-brand font-lato text-[11px] font-bold uppercase tracking-[0.15em] px-4 py-1.5">
+          {project.status}
+        </span>
+      </div>
+      <div className="p-8 md:p-12 flex flex-col justify-center">
+        <span className="font-lato text-xs tracking-[0.3em] uppercase text-brand-light">{eyebrow}</span>
+        <h2 className="font-playfair text-3xl md:text-4xl text-ink mt-3 mb-2">{project.name}</h2>
+        <p className="font-lato text-sm text-[#707070] mb-5">{project.location}</p>
+        <p className="font-lato text-sm md:text-base text-[#707070] leading-relaxed mb-8 max-w-sm">
+          {project.description}
+        </p>
+
+        {project.ctaLabel && (
+          <a
+            href={project.href}
+            {...(external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+            className="group inline-flex items-center gap-2 w-fit bg-ink text-white font-lato text-xs uppercase tracking-[0.2em] px-6 py-3.5 hover:bg-brand hover:text-on-brand transition-colors"
+          >
+            {project.ctaLabel}
+            <ArrowRight size={14} className="transition-transform duration-300 group-hover:translate-x-1" />
+          </a>
+        )}
+      </div>
+    </div>
+  );
+}
+
+export default function ResidentialSpotlight() {
+  const project = projects.find((p) => p.featured) ?? projects[0];
+
+  return (
+    <section className="relative w-full bg-gradient-to-b from-ink via-ink-deep to-ink pt-14 md:pt-20 pb-16 md:pb-24 overflow-hidden">
       <div className="pointer-events-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[500px] bg-brand-light/10 blur-[120px] rounded-full" />
       <div
         className="pointer-events-none absolute top-0 left-0 w-24 h-24 md:w-40 md:h-40 border-t-2 border-l-2 border-brand-light/25"
@@ -27,33 +74,7 @@ export default function ResidentialSpotlight() {
       </span>
 
       <div className="relative max-w-6xl mx-auto px-6 -mt-8 md:-mt-12">
-        <div
-          className={`bg-white shadow-2xl grid grid-cols-1 md:grid-cols-2 transition-all duration-700 ease-out motion-reduce:transition-none ${
-            visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-          }`}
-        >
-          <div className="relative aspect-[4/3] md:aspect-auto overflow-hidden">
-            <ProjectImage src={project.image} alt={project.name} cutout={project.cutout} />
-            <span className="absolute top-5 left-5 bg-brand text-on-brand font-lato text-[11px] font-bold uppercase tracking-[0.15em] px-4 py-1.5">
-              {project.status}
-            </span>
-          </div>
-          <div className="p-8 md:p-12 flex flex-col justify-center">
-            <span className="font-lato text-xs tracking-[0.3em] uppercase text-brand-light">Spotlight</span>
-            <h2 className="font-playfair text-3xl md:text-4xl text-ink mt-3 mb-2">{project.name}</h2>
-            <p className="font-lato text-sm text-[#707070] mb-5">{project.location}</p>
-            <p className="font-lato text-sm md:text-base text-[#707070] leading-relaxed mb-8 max-w-sm">
-              {project.description}
-            </p>
-            
-            <a href={project.href}
-              className="group inline-flex items-center gap-2 w-fit bg-ink text-white font-lato text-xs uppercase tracking-[0.2em] px-6 py-3.5 hover:bg-brand hover:text-on-brand transition-colors"
-            >
-              Explore Project
-              <ArrowRight size={14} className="transition-transform duration-300 group-hover:translate-x-1" />
-            </a>
-          </div>
-        </div>
+        <SpotlightCard project={project} />
       </div>
     </section>
   );

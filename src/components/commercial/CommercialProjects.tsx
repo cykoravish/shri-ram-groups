@@ -3,8 +3,8 @@ import CommercialProjectRow from "./CommercialProjectRow";
 const projects = [
   {
     name: "ShriRam Business Centre",
-    location: "Sector 19,",
-    city: "Noida",
+    location: "Ghaziabad",
+    city: "",
     description:
       "A modern glass-fronted business address with Grade-A office and retail space, currently home to an IDBI Bank branch — designed to elevate your business presence.",
     image: "/images/project-shriram-business-centre.webp",

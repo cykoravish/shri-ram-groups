@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import PageBanner from "@/components/residential/PageBanner";
 import ResidentialSpotlight from "@/components/residential/ResidentialSpotlight";
-import ProjectsGrid from "@/components/residential/ProjectsGrid";
+import DeliveredProjects from "@/components/residential/DeliveredProjects";
 import StatsStrip from "@/components/residential/StatsStrip";
 import Footer from "@/components/layout/Footer";
 
@@ -23,7 +23,7 @@ export default function ResidentialPage() {
       />
       <ResidentialSpotlight />
       <StatsStrip />
-      <ProjectsGrid />
+      <DeliveredProjects />
       <Footer />
     </>
   );

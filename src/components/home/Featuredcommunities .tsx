@@ -19,7 +19,7 @@ const projects = [
   },
   {
     name: "ShriRam Business Centre",
-    location: "Sector 19, Noida",
+    location: "Ghaziabad",
     type: "Commercial",
     image: "/images/project-shriram-business-centre.webp",
     href: "/commercial",
