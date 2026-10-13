@@ -80,8 +80,12 @@ export default function CommercialProjectRow({
           </h2>
           <p className="font-lato text-lg text-[#4F4F4F] mt-2">
             {location}
-            <br />
-            {city}
+            {city && (
+              <>
+                <br />
+                {city}
+              </>
+            )}
           </p>
           <span className="block w-20 h-[3px] bg-brand my-6" />
           <p className="font-lato text-sm md:text-base text-[#707070] leading-relaxed max-w-md mb-6">
